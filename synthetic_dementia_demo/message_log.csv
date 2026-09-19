@@ -1,0 +1,721 @@
+message_id,event_id,patient_id,timestamp,direction,sender_role,text,confusion_score
+MSG-EVT-001-01-wake_up-OUT,EVT-001-01-wake_up,SYN-001,2026-08-21T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-001-01-wake_up-IN,EVT-001-01-wake_up,SYN-001,2026-08-21T08:02:00,inbound,patient,"Confirmed, thank you.",0.03
+MSG-EVT-001-01-breakfast-OUT,EVT-001-01-breakfast,SYN-001,2026-08-21T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-001-01-breakfast-IN,EVT-001-01-breakfast,SYN-001,2026-08-21T08:41:00,inbound,patient,"Confirmed, thank you.",0.02
+MSG-EVT-001-01-morning_medication-OUT,EVT-001-01-morning_medication,SYN-001,2026-08-21T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-001-01-morning_medication-IN,EVT-001-01-morning_medication,SYN-001,2026-08-21T09:05:00,inbound,patient,"Confirmed, thank you.",0.11
+MSG-EVT-001-01-lunch_checkin-OUT,EVT-001-01-lunch_checkin,SYN-001,2026-08-21T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-001-01-lunch_checkin-IN,EVT-001-01-lunch_checkin,SYN-001,2026-08-21T12:49:00,inbound,patient,"Confirmed, thank you.",0.05
+MSG-EVT-001-01-evening_medication-OUT,EVT-001-01-evening_medication,SYN-001,2026-08-21T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-001-01-evening_medication-IN,EVT-001-01-evening_medication,SYN-001,2026-08-21T18:19:00,inbound,patient,"Confirmed, thank you.",0.08
+MSG-EVT-001-01-bedtime_checkin-OUT,EVT-001-01-bedtime_checkin,SYN-001,2026-08-21T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-001-01-bedtime_checkin-IN,EVT-001-01-bedtime_checkin,SYN-001,2026-08-21T21:09:00,inbound,patient,"Confirmed, thank you.",0.09
+MSG-EVT-001-02-wake_up-OUT,EVT-001-02-wake_up,SYN-001,2026-08-22T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-001-02-wake_up-IN,EVT-001-02-wake_up,SYN-001,2026-08-22T08:07:00,inbound,patient,"Confirmed, thank you.",0.06
+MSG-EVT-001-02-breakfast-OUT,EVT-001-02-breakfast,SYN-001,2026-08-22T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-001-02-breakfast-IN,EVT-001-02-breakfast,SYN-001,2026-08-22T08:42:00,inbound,patient,"Confirmed, thank you.",0.08
+MSG-EVT-001-02-morning_medication-OUT,EVT-001-02-morning_medication,SYN-001,2026-08-22T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-001-02-morning_medication-IN,EVT-001-02-morning_medication,SYN-001,2026-08-22T09:12:00,inbound,patient,"Confirmed, thank you.",0.09
+MSG-EVT-001-02-lunch_checkin-OUT,EVT-001-02-lunch_checkin,SYN-001,2026-08-22T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-001-02-lunch_checkin-IN,EVT-001-02-lunch_checkin,SYN-001,2026-08-22T12:41:00,inbound,patient,"Confirmed, thank you.",0.1
+MSG-EVT-001-02-evening_medication-OUT,EVT-001-02-evening_medication,SYN-001,2026-08-22T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-001-02-evening_medication-IN,EVT-001-02-evening_medication,SYN-001,2026-08-22T18:10:00,inbound,patient,"Confirmed, thank you.",0.04
+MSG-EVT-001-02-bedtime_checkin-OUT,EVT-001-02-bedtime_checkin,SYN-001,2026-08-22T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-001-02-bedtime_checkin-IN,EVT-001-02-bedtime_checkin,SYN-001,2026-08-22T21:02:00,inbound,patient,"Confirmed, thank you.",0.08
+MSG-EVT-001-03-wake_up-OUT,EVT-001-03-wake_up,SYN-001,2026-08-23T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-001-03-wake_up-IN,EVT-001-03-wake_up,SYN-001,2026-08-23T08:11:00,inbound,patient,"Confirmed, thank you.",0.18
+MSG-EVT-001-03-breakfast-OUT,EVT-001-03-breakfast,SYN-001,2026-08-23T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-001-03-breakfast-IN,EVT-001-03-breakfast,SYN-001,2026-08-23T08:36:00,inbound,patient,"Confirmed, thank you.",0.09
+MSG-EVT-001-03-morning_medication-OUT,EVT-001-03-morning_medication,SYN-001,2026-08-23T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-001-03-morning_medication-IN,EVT-001-03-morning_medication,SYN-001,2026-08-23T09:17:00,inbound,patient,"Confirmed, thank you.",0.05
+MSG-EVT-001-03-lunch_checkin-OUT,EVT-001-03-lunch_checkin,SYN-001,2026-08-23T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-001-03-lunch_checkin-IN,EVT-001-03-lunch_checkin,SYN-001,2026-08-23T12:46:00,inbound,patient,"Confirmed, thank you.",0.1
+MSG-EVT-001-03-evening_medication-OUT,EVT-001-03-evening_medication,SYN-001,2026-08-23T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-001-03-evening_medication-IN,EVT-001-03-evening_medication,SYN-001,2026-08-23T18:09:00,inbound,patient,"Confirmed, thank you.",0.06
+MSG-EVT-001-03-bedtime_checkin-OUT,EVT-001-03-bedtime_checkin,SYN-001,2026-08-23T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-001-03-bedtime_checkin-IN,EVT-001-03-bedtime_checkin,SYN-001,2026-08-23T21:14:00,inbound,patient,"Confirmed, thank you.",0.0
+MSG-EVT-001-04-wake_up-OUT,EVT-001-04-wake_up,SYN-001,2026-08-24T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-001-04-wake_up-IN,EVT-001-04-wake_up,SYN-001,2026-08-24T08:01:00,inbound,patient,"Confirmed, thank you.",0.14
+MSG-EVT-001-04-breakfast-OUT,EVT-001-04-breakfast,SYN-001,2026-08-24T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-001-04-breakfast-IN,EVT-001-04-breakfast,SYN-001,2026-08-24T08:41:00,inbound,patient,"Confirmed, thank you.",0.13
+MSG-EVT-001-04-morning_medication-OUT,EVT-001-04-morning_medication,SYN-001,2026-08-24T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-001-04-morning_medication-IN,EVT-001-04-morning_medication,SYN-001,2026-08-24T09:20:00,inbound,patient,"Confirmed, thank you.",0.12
+MSG-EVT-001-04-lunch_checkin-OUT,EVT-001-04-lunch_checkin,SYN-001,2026-08-24T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-001-04-lunch_checkin-IN,EVT-001-04-lunch_checkin,SYN-001,2026-08-24T12:42:00,inbound,patient,"Confirmed, thank you.",0.11
+MSG-EVT-001-04-evening_medication-OUT,EVT-001-04-evening_medication,SYN-001,2026-08-24T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-001-04-evening_medication-IN,EVT-001-04-evening_medication,SYN-001,2026-08-24T18:11:00,inbound,patient,"Confirmed, thank you.",0.05
+MSG-EVT-001-04-bedtime_checkin-OUT,EVT-001-04-bedtime_checkin,SYN-001,2026-08-24T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-001-04-bedtime_checkin-IN,EVT-001-04-bedtime_checkin,SYN-001,2026-08-24T21:15:00,inbound,patient,"Confirmed, thank you.",0.06
+MSG-EVT-001-05-wake_up-OUT,EVT-001-05-wake_up,SYN-001,2026-08-25T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-001-05-wake_up-IN,EVT-001-05-wake_up,SYN-001,2026-08-25T08:06:00,inbound,patient,"Confirmed, thank you.",0.09
+MSG-EVT-001-05-breakfast-OUT,EVT-001-05-breakfast,SYN-001,2026-08-25T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-001-05-breakfast-IN,EVT-001-05-breakfast,SYN-001,2026-08-25T08:41:00,inbound,patient,"Confirmed, thank you.",0.05
+MSG-EVT-001-05-morning_medication-OUT,EVT-001-05-morning_medication,SYN-001,2026-08-25T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-001-05-morning_medication-IN,EVT-001-05-morning_medication,SYN-001,2026-08-25T09:12:00,inbound,patient,"Confirmed, thank you.",0.15
+MSG-EVT-001-05-lunch_checkin-OUT,EVT-001-05-lunch_checkin,SYN-001,2026-08-25T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-001-05-lunch_checkin-IN,EVT-001-05-lunch_checkin,SYN-001,2026-08-25T12:47:00,inbound,patient,"Confirmed, thank you.",0.12
+MSG-EVT-001-05-evening_medication-OUT,EVT-001-05-evening_medication,SYN-001,2026-08-25T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-001-05-evening_medication-IN,EVT-001-05-evening_medication,SYN-001,2026-08-25T18:08:00,inbound,patient,"Confirmed, thank you.",0.03
+MSG-EVT-001-05-bedtime_checkin-OUT,EVT-001-05-bedtime_checkin,SYN-001,2026-08-25T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-001-05-bedtime_checkin-IN,EVT-001-05-bedtime_checkin,SYN-001,2026-08-25T21:05:00,inbound,patient,"Confirmed, thank you.",0.03
+MSG-EVT-001-06-wake_up-OUT,EVT-001-06-wake_up,SYN-001,2026-08-26T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-001-06-wake_up-IN,EVT-001-06-wake_up,SYN-001,2026-08-26T08:07:00,inbound,patient,"Confirmed, thank you.",0.13
+MSG-EVT-001-06-breakfast-OUT,EVT-001-06-breakfast,SYN-001,2026-08-26T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-001-06-breakfast-IN,EVT-001-06-breakfast,SYN-001,2026-08-26T08:36:00,inbound,patient,"Confirmed, thank you.",0.1
+MSG-EVT-001-06-morning_medication-OUT,EVT-001-06-morning_medication,SYN-001,2026-08-26T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-001-06-morning_medication-IN,EVT-001-06-morning_medication,SYN-001,2026-08-26T09:15:00,inbound,patient,"Confirmed, thank you.",0.1
+MSG-EVT-001-06-lunch_checkin-OUT,EVT-001-06-lunch_checkin,SYN-001,2026-08-26T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-001-06-lunch_checkin-IN,EVT-001-06-lunch_checkin,SYN-001,2026-08-26T12:45:00,inbound,patient,"Confirmed, thank you.",0.07
+MSG-EVT-001-06-evening_medication-OUT,EVT-001-06-evening_medication,SYN-001,2026-08-26T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-001-06-evening_medication-IN,EVT-001-06-evening_medication,SYN-001,2026-08-26T18:12:00,inbound,patient,"Confirmed, thank you.",0.05
+MSG-EVT-001-06-bedtime_checkin-OUT,EVT-001-06-bedtime_checkin,SYN-001,2026-08-26T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-001-06-bedtime_checkin-IN,EVT-001-06-bedtime_checkin,SYN-001,2026-08-26T21:05:00,inbound,patient,"Confirmed, thank you.",0.04
+MSG-EVT-001-07-wake_up-OUT,EVT-001-07-wake_up,SYN-001,2026-08-27T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-001-07-wake_up-IN,EVT-001-07-wake_up,SYN-001,2026-08-27T08:11:00,inbound,patient,"Confirmed, thank you.",0.05
+MSG-EVT-001-07-breakfast-OUT,EVT-001-07-breakfast,SYN-001,2026-08-27T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-001-07-breakfast-IN,EVT-001-07-breakfast,SYN-001,2026-08-27T08:32:00,inbound,patient,"Confirmed, thank you.",0.05
+MSG-EVT-001-07-morning_medication-OUT,EVT-001-07-morning_medication,SYN-001,2026-08-27T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-001-07-morning_medication-IN,EVT-001-07-morning_medication,SYN-001,2026-08-27T09:11:00,inbound,patient,"Confirmed, thank you.",0.09
+MSG-EVT-001-07-lunch_checkin-OUT,EVT-001-07-lunch_checkin,SYN-001,2026-08-27T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-001-07-lunch_checkin-IN,EVT-001-07-lunch_checkin,SYN-001,2026-08-27T12:48:00,inbound,patient,"Confirmed, thank you.",0.1
+MSG-EVT-001-07-evening_medication-OUT,EVT-001-07-evening_medication,SYN-001,2026-08-27T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-001-07-evening_medication-IN,EVT-001-07-evening_medication,SYN-001,2026-08-27T18:10:00,inbound,patient,"Confirmed, thank you.",0.15
+MSG-EVT-001-07-bedtime_checkin-OUT,EVT-001-07-bedtime_checkin,SYN-001,2026-08-27T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-001-07-bedtime_checkin-IN,EVT-001-07-bedtime_checkin,SYN-001,2026-08-27T21:08:00,inbound,patient,"Confirmed, thank you.",0.07
+MSG-EVT-001-08-wake_up-OUT,EVT-001-08-wake_up,SYN-001,2026-08-28T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-001-08-wake_up-IN,EVT-001-08-wake_up,SYN-001,2026-08-28T08:09:00,inbound,patient,"Confirmed, thank you.",0.14
+MSG-EVT-001-08-breakfast-OUT,EVT-001-08-breakfast,SYN-001,2026-08-28T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-001-08-breakfast-IN,EVT-001-08-breakfast,SYN-001,2026-08-28T08:40:00,inbound,patient,"Confirmed, thank you.",0.17
+MSG-EVT-001-08-morning_medication-OUT,EVT-001-08-morning_medication,SYN-001,2026-08-28T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-001-08-morning_medication-IN,EVT-001-08-morning_medication,SYN-001,2026-08-28T09:03:00,inbound,patient,"Confirmed, thank you.",0.15
+MSG-EVT-001-08-lunch_checkin-OUT,EVT-001-08-lunch_checkin,SYN-001,2026-08-28T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-001-08-lunch_checkin-IN,EVT-001-08-lunch_checkin,SYN-001,2026-08-28T12:43:00,inbound,patient,"Confirmed, thank you.",0.02
+MSG-EVT-001-08-evening_medication-OUT,EVT-001-08-evening_medication,SYN-001,2026-08-28T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-001-08-evening_medication-IN,EVT-001-08-evening_medication,SYN-001,2026-08-28T18:19:00,inbound,patient,"Confirmed, thank you.",0.11
+MSG-EVT-001-08-bedtime_checkin-OUT,EVT-001-08-bedtime_checkin,SYN-001,2026-08-28T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-001-08-bedtime_checkin-IN,EVT-001-08-bedtime_checkin,SYN-001,2026-08-28T21:16:00,inbound,patient,"Confirmed, thank you.",0.07
+MSG-EVT-001-09-wake_up-OUT,EVT-001-09-wake_up,SYN-001,2026-08-29T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-001-09-wake_up-IN,EVT-001-09-wake_up,SYN-001,2026-08-29T08:03:00,inbound,patient,"Confirmed, thank you.",0.02
+MSG-EVT-001-09-breakfast-OUT,EVT-001-09-breakfast,SYN-001,2026-08-29T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-001-09-breakfast-IN,EVT-001-09-breakfast,SYN-001,2026-08-29T08:34:00,inbound,patient,"Confirmed, thank you.",0.0
+MSG-EVT-001-09-morning_medication-OUT,EVT-001-09-morning_medication,SYN-001,2026-08-29T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-001-09-morning_medication-IN,EVT-001-09-morning_medication,SYN-001,2026-08-29T09:06:00,inbound,patient,"Confirmed, thank you.",0.03
+MSG-EVT-001-09-lunch_checkin-OUT,EVT-001-09-lunch_checkin,SYN-001,2026-08-29T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-001-09-lunch_checkin-IN,EVT-001-09-lunch_checkin,SYN-001,2026-08-29T12:44:00,inbound,patient,"Confirmed, thank you.",0.03
+MSG-EVT-001-09-evening_medication-OUT,EVT-001-09-evening_medication,SYN-001,2026-08-29T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-001-09-evening_medication-IN,EVT-001-09-evening_medication,SYN-001,2026-08-29T18:11:00,inbound,patient,"Confirmed, thank you.",0.04
+MSG-EVT-001-09-bedtime_checkin-OUT,EVT-001-09-bedtime_checkin,SYN-001,2026-08-29T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-001-09-bedtime_checkin-IN,EVT-001-09-bedtime_checkin,SYN-001,2026-08-29T21:11:00,inbound,patient,"Confirmed, thank you.",0.09
+MSG-EVT-001-10-wake_up-OUT,EVT-001-10-wake_up,SYN-001,2026-08-30T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-001-10-wake_up-IN,EVT-001-10-wake_up,SYN-001,2026-08-30T08:08:00,inbound,patient,"Confirmed, thank you.",0.07
+MSG-EVT-001-10-breakfast-OUT,EVT-001-10-breakfast,SYN-001,2026-08-30T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-001-10-breakfast-IN,EVT-001-10-breakfast,SYN-001,2026-08-30T08:40:00,inbound,patient,"Confirmed, thank you.",0.12
+MSG-EVT-001-10-morning_medication-OUT,EVT-001-10-morning_medication,SYN-001,2026-08-30T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-001-10-morning_medication-IN,EVT-001-10-morning_medication,SYN-001,2026-08-30T09:11:00,inbound,patient,"Confirmed, thank you.",0.03
+MSG-EVT-001-10-lunch_checkin-OUT,EVT-001-10-lunch_checkin,SYN-001,2026-08-30T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-001-10-lunch_checkin-IN,EVT-001-10-lunch_checkin,SYN-001,2026-08-30T12:44:00,inbound,patient,"Confirmed, thank you.",0.09
+MSG-EVT-001-10-evening_medication-OUT,EVT-001-10-evening_medication,SYN-001,2026-08-30T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-001-10-evening_medication-IN,EVT-001-10-evening_medication,SYN-001,2026-08-30T18:08:00,inbound,patient,"Confirmed, thank you.",0.1
+MSG-EVT-001-10-bedtime_checkin-OUT,EVT-001-10-bedtime_checkin,SYN-001,2026-08-30T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-001-10-bedtime_checkin-IN,EVT-001-10-bedtime_checkin,SYN-001,2026-08-30T21:20:00,inbound,patient,"Confirmed, thank you.",0.06
+MSG-EVT-001-11-wake_up-OUT,EVT-001-11-wake_up,SYN-001,2026-08-31T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-001-11-wake_up-IN,EVT-001-11-wake_up,SYN-001,2026-08-31T08:05:00,inbound,patient,"Confirmed, thank you.",0.08
+MSG-EVT-001-11-breakfast-OUT,EVT-001-11-breakfast,SYN-001,2026-08-31T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-001-11-breakfast-IN,EVT-001-11-breakfast,SYN-001,2026-08-31T08:36:00,inbound,patient,"Confirmed, thank you.",0.02
+MSG-EVT-001-11-morning_medication-OUT,EVT-001-11-morning_medication,SYN-001,2026-08-31T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-001-11-morning_medication-IN,EVT-001-11-morning_medication,SYN-001,2026-08-31T09:10:00,inbound,patient,"Confirmed, thank you.",0.09
+MSG-EVT-001-11-lunch_checkin-OUT,EVT-001-11-lunch_checkin,SYN-001,2026-08-31T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-001-11-lunch_checkin-IN,EVT-001-11-lunch_checkin,SYN-001,2026-08-31T12:46:00,inbound,patient,"Confirmed, thank you.",0.09
+MSG-EVT-001-11-evening_medication-OUT,EVT-001-11-evening_medication,SYN-001,2026-08-31T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-001-11-evening_medication-IN,EVT-001-11-evening_medication,SYN-001,2026-08-31T18:11:00,inbound,patient,"Confirmed, thank you.",0.08
+MSG-EVT-001-11-bedtime_checkin-OUT,EVT-001-11-bedtime_checkin,SYN-001,2026-08-31T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-001-11-bedtime_checkin-IN,EVT-001-11-bedtime_checkin,SYN-001,2026-08-31T21:09:00,inbound,patient,"Confirmed, thank you.",0.14
+MSG-EVT-001-12-wake_up-OUT,EVT-001-12-wake_up,SYN-001,2026-09-01T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-001-12-wake_up-IN,EVT-001-12-wake_up,SYN-001,2026-09-01T08:11:00,inbound,patient,"Confirmed, thank you.",0.12
+MSG-EVT-001-12-breakfast-OUT,EVT-001-12-breakfast,SYN-001,2026-09-01T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-001-12-breakfast-IN,EVT-001-12-breakfast,SYN-001,2026-09-01T08:35:00,inbound,patient,"Confirmed, thank you.",0.07
+MSG-EVT-001-12-morning_medication-OUT,EVT-001-12-morning_medication,SYN-001,2026-09-01T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-001-12-morning_medication-IN,EVT-001-12-morning_medication,SYN-001,2026-09-01T09:06:00,inbound,patient,"Confirmed, thank you.",0.1
+MSG-EVT-001-12-lunch_checkin-OUT,EVT-001-12-lunch_checkin,SYN-001,2026-09-01T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-001-12-lunch_checkin-IN,EVT-001-12-lunch_checkin,SYN-001,2026-09-01T12:42:00,inbound,patient,"Confirmed, thank you.",0.03
+MSG-EVT-001-12-evening_medication-OUT,EVT-001-12-evening_medication,SYN-001,2026-09-01T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-001-12-evening_medication-IN,EVT-001-12-evening_medication,SYN-001,2026-09-01T18:14:00,inbound,patient,"Confirmed, thank you.",0.12
+MSG-EVT-001-12-bedtime_checkin-OUT,EVT-001-12-bedtime_checkin,SYN-001,2026-09-01T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-001-12-bedtime_checkin-IN,EVT-001-12-bedtime_checkin,SYN-001,2026-09-01T21:10:00,inbound,patient,"Confirmed, thank you.",0.16
+MSG-EVT-001-13-wake_up-OUT,EVT-001-13-wake_up,SYN-001,2026-09-02T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-001-13-wake_up-IN,EVT-001-13-wake_up,SYN-001,2026-09-02T08:08:00,inbound,patient,"Confirmed, thank you.",0.12
+MSG-EVT-001-13-breakfast-OUT,EVT-001-13-breakfast,SYN-001,2026-09-02T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-001-13-breakfast-IN,EVT-001-13-breakfast,SYN-001,2026-09-02T08:35:00,inbound,patient,"Confirmed, thank you.",0.17
+MSG-EVT-001-13-morning_medication-OUT,EVT-001-13-morning_medication,SYN-001,2026-09-02T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-001-13-morning_medication-IN,EVT-001-13-morning_medication,SYN-001,2026-09-02T09:05:00,inbound,patient,"Confirmed, thank you.",0.09
+MSG-EVT-001-13-lunch_checkin-OUT,EVT-001-13-lunch_checkin,SYN-001,2026-09-02T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-001-13-lunch_checkin-IN,EVT-001-13-lunch_checkin,SYN-001,2026-09-02T12:39:00,inbound,patient,"Confirmed, thank you.",0.13
+MSG-EVT-001-13-evening_medication-OUT,EVT-001-13-evening_medication,SYN-001,2026-09-02T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-001-13-evening_medication-IN,EVT-001-13-evening_medication,SYN-001,2026-09-02T18:23:00,inbound,patient,"Confirmed, thank you.",0.12
+MSG-EVT-001-13-bedtime_checkin-OUT,EVT-001-13-bedtime_checkin,SYN-001,2026-09-02T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-001-13-bedtime_checkin-IN,EVT-001-13-bedtime_checkin,SYN-001,2026-09-02T21:07:00,inbound,patient,"Confirmed, thank you.",0.02
+MSG-EVT-001-14-wake_up-OUT,EVT-001-14-wake_up,SYN-001,2026-09-03T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-001-14-wake_up-IN,EVT-001-14-wake_up,SYN-001,2026-09-03T08:01:00,inbound,patient,"Confirmed, thank you.",0.02
+MSG-EVT-001-14-breakfast-OUT,EVT-001-14-breakfast,SYN-001,2026-09-03T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-001-14-breakfast-IN,EVT-001-14-breakfast,SYN-001,2026-09-03T08:44:00,inbound,patient,"Confirmed, thank you.",0.06
+MSG-EVT-001-14-morning_medication-OUT,EVT-001-14-morning_medication,SYN-001,2026-09-03T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-001-14-morning_medication-IN,EVT-001-14-morning_medication,SYN-001,2026-09-03T09:12:00,inbound,patient,"Confirmed, thank you.",0.02
+MSG-EVT-001-14-lunch_checkin-OUT,EVT-001-14-lunch_checkin,SYN-001,2026-09-03T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-001-14-lunch_checkin-IN,EVT-001-14-lunch_checkin,SYN-001,2026-09-03T12:50:00,inbound,patient,"Confirmed, thank you.",0.02
+MSG-EVT-001-14-evening_medication-OUT,EVT-001-14-evening_medication,SYN-001,2026-09-03T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-001-14-evening_medication-IN,EVT-001-14-evening_medication,SYN-001,2026-09-03T18:07:00,inbound,patient,"Confirmed, thank you.",0.07
+MSG-EVT-001-14-bedtime_checkin-OUT,EVT-001-14-bedtime_checkin,SYN-001,2026-09-03T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-001-14-bedtime_checkin-IN,EVT-001-14-bedtime_checkin,SYN-001,2026-09-03T21:18:00,inbound,patient,"Confirmed, thank you.",0.07
+MSG-EVT-001-15-wake_up-OUT,EVT-001-15-wake_up,SYN-001,2026-09-04T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-001-15-wake_up-IN,EVT-001-15-wake_up,SYN-001,2026-09-04T08:07:00,inbound,patient,"Confirmed, thank you.",0.0
+MSG-EVT-001-15-breakfast-OUT,EVT-001-15-breakfast,SYN-001,2026-09-04T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-001-15-breakfast-IN,EVT-001-15-breakfast,SYN-001,2026-09-04T08:38:00,inbound,patient,"Confirmed, thank you.",0.12
+MSG-EVT-001-15-morning_medication-OUT,EVT-001-15-morning_medication,SYN-001,2026-09-04T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-001-15-morning_medication-IN,EVT-001-15-morning_medication,SYN-001,2026-09-04T09:08:00,inbound,patient,"Confirmed, thank you.",0.04
+MSG-EVT-001-15-lunch_checkin-OUT,EVT-001-15-lunch_checkin,SYN-001,2026-09-04T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-001-15-lunch_checkin-IN,EVT-001-15-lunch_checkin,SYN-001,2026-09-04T12:42:00,inbound,patient,"Confirmed, thank you.",0.09
+MSG-EVT-001-15-evening_medication-OUT,EVT-001-15-evening_medication,SYN-001,2026-09-04T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-001-15-evening_medication-IN,EVT-001-15-evening_medication,SYN-001,2026-09-04T18:15:00,inbound,patient,"Confirmed, thank you.",0.08
+MSG-EVT-001-15-bedtime_checkin-OUT,EVT-001-15-bedtime_checkin,SYN-001,2026-09-04T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-001-15-bedtime_checkin-IN,EVT-001-15-bedtime_checkin,SYN-001,2026-09-04T21:10:00,inbound,patient,"Confirmed, thank you.",0.06
+MSG-EVT-001-16-wake_up-OUT,EVT-001-16-wake_up,SYN-001,2026-09-05T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-001-16-wake_up-IN,EVT-001-16-wake_up,SYN-001,2026-09-05T08:10:00,inbound,patient,"Confirmed, thank you.",0.08
+MSG-EVT-001-16-breakfast-OUT,EVT-001-16-breakfast,SYN-001,2026-09-05T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-001-16-breakfast-IN,EVT-001-16-breakfast,SYN-001,2026-09-05T08:41:00,inbound,patient,"Confirmed, thank you.",0.07
+MSG-EVT-001-16-morning_medication-OUT,EVT-001-16-morning_medication,SYN-001,2026-09-05T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-001-16-morning_medication-IN,EVT-001-16-morning_medication,SYN-001,2026-09-05T09:01:00,inbound,patient,"Confirmed, thank you.",0.09
+MSG-EVT-001-16-lunch_checkin-OUT,EVT-001-16-lunch_checkin,SYN-001,2026-09-05T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-001-16-lunch_checkin-IN,EVT-001-16-lunch_checkin,SYN-001,2026-09-05T12:38:00,inbound,patient,"Confirmed, thank you.",0.0
+MSG-EVT-001-16-evening_medication-OUT,EVT-001-16-evening_medication,SYN-001,2026-09-05T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-001-16-evening_medication-IN,EVT-001-16-evening_medication,SYN-001,2026-09-05T18:10:00,inbound,patient,"Confirmed, thank you.",0.08
+MSG-EVT-001-16-bedtime_checkin-OUT,EVT-001-16-bedtime_checkin,SYN-001,2026-09-05T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-001-16-bedtime_checkin-IN,EVT-001-16-bedtime_checkin,SYN-001,2026-09-05T21:09:00,inbound,patient,"Confirmed, thank you.",0.03
+MSG-EVT-001-17-wake_up-OUT,EVT-001-17-wake_up,SYN-001,2026-09-06T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-001-17-wake_up-IN,EVT-001-17-wake_up,SYN-001,2026-09-06T08:07:00,inbound,patient,"Confirmed, thank you.",0.04
+MSG-EVT-001-17-breakfast-OUT,EVT-001-17-breakfast,SYN-001,2026-09-06T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-001-17-breakfast-IN,EVT-001-17-breakfast,SYN-001,2026-09-06T08:34:00,inbound,patient,"Confirmed, thank you.",0.11
+MSG-EVT-001-17-morning_medication-OUT,EVT-001-17-morning_medication,SYN-001,2026-09-06T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-001-17-morning_medication-IN,EVT-001-17-morning_medication,SYN-001,2026-09-06T09:17:00,inbound,patient,"Confirmed, thank you.",0.05
+MSG-EVT-001-17-lunch_checkin-OUT,EVT-001-17-lunch_checkin,SYN-001,2026-09-06T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-001-17-lunch_checkin-IN,EVT-001-17-lunch_checkin,SYN-001,2026-09-06T12:38:00,inbound,patient,"Confirmed, thank you.",0.09
+MSG-EVT-001-17-evening_medication-OUT,EVT-001-17-evening_medication,SYN-001,2026-09-06T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-001-17-evening_medication-IN,EVT-001-17-evening_medication,SYN-001,2026-09-06T18:11:00,inbound,patient,"Confirmed, thank you.",0.11
+MSG-EVT-001-17-bedtime_checkin-OUT,EVT-001-17-bedtime_checkin,SYN-001,2026-09-06T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-001-17-bedtime_checkin-IN,EVT-001-17-bedtime_checkin,SYN-001,2026-09-06T21:06:00,inbound,patient,"Confirmed, thank you.",0.08
+MSG-EVT-001-18-wake_up-OUT,EVT-001-18-wake_up,SYN-001,2026-09-07T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-001-18-wake_up-IN,EVT-001-18-wake_up,SYN-001,2026-09-07T08:09:00,inbound,patient,"Confirmed, thank you.",0.02
+MSG-EVT-001-18-breakfast-OUT,EVT-001-18-breakfast,SYN-001,2026-09-07T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-001-18-breakfast-IN,EVT-001-18-breakfast,SYN-001,2026-09-07T08:39:00,inbound,patient,"Confirmed, thank you.",0.09
+MSG-EVT-001-18-morning_medication-OUT,EVT-001-18-morning_medication,SYN-001,2026-09-07T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-001-18-morning_medication-IN,EVT-001-18-morning_medication,SYN-001,2026-09-07T09:20:00,inbound,patient,"Confirmed, thank you.",0.09
+MSG-EVT-001-18-lunch_checkin-OUT,EVT-001-18-lunch_checkin,SYN-001,2026-09-07T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-001-18-lunch_checkin-IN,EVT-001-18-lunch_checkin,SYN-001,2026-09-07T12:41:00,inbound,patient,"Confirmed, thank you.",0.12
+MSG-EVT-001-18-evening_medication-OUT,EVT-001-18-evening_medication,SYN-001,2026-09-07T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-001-18-evening_medication-IN,EVT-001-18-evening_medication,SYN-001,2026-09-07T18:31:00,inbound,patient,"Confirmed, thank you.",0.08
+MSG-EVT-001-18-bedtime_checkin-OUT,EVT-001-18-bedtime_checkin,SYN-001,2026-09-07T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-001-18-bedtime_checkin-IN,EVT-001-18-bedtime_checkin,SYN-001,2026-09-07T21:14:00,inbound,patient,"Confirmed, thank you.",0.1
+MSG-EVT-001-19-wake_up-OUT,EVT-001-19-wake_up,SYN-001,2026-09-08T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-001-19-wake_up-IN,EVT-001-19-wake_up,SYN-001,2026-09-08T08:06:00,inbound,patient,"Confirmed, thank you.",0.11
+MSG-EVT-001-19-breakfast-OUT,EVT-001-19-breakfast,SYN-001,2026-09-08T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-001-19-breakfast-IN,EVT-001-19-breakfast,SYN-001,2026-09-08T08:36:00,inbound,patient,"Confirmed, thank you.",0.08
+MSG-EVT-001-19-morning_medication-OUT,EVT-001-19-morning_medication,SYN-001,2026-09-08T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-001-19-morning_medication-IN,EVT-001-19-morning_medication,SYN-001,2026-09-08T09:01:00,inbound,patient,"Confirmed, thank you.",0.03
+MSG-EVT-001-19-lunch_checkin-OUT,EVT-001-19-lunch_checkin,SYN-001,2026-09-08T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-001-19-lunch_checkin-IN,EVT-001-19-lunch_checkin,SYN-001,2026-09-08T12:44:00,inbound,patient,"Confirmed, thank you.",0.12
+MSG-EVT-001-19-evening_medication-OUT,EVT-001-19-evening_medication,SYN-001,2026-09-08T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-001-19-evening_medication-IN,EVT-001-19-evening_medication,SYN-001,2026-09-08T18:01:00,inbound,patient,"Confirmed, thank you.",0.1
+MSG-EVT-001-19-bedtime_checkin-OUT,EVT-001-19-bedtime_checkin,SYN-001,2026-09-08T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-001-19-bedtime_checkin-IN,EVT-001-19-bedtime_checkin,SYN-001,2026-09-08T21:09:00,inbound,patient,"Confirmed, thank you.",0.12
+MSG-EVT-001-20-wake_up-OUT,EVT-001-20-wake_up,SYN-001,2026-09-09T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-001-20-wake_up-IN,EVT-001-20-wake_up,SYN-001,2026-09-09T08:06:00,inbound,patient,"Confirmed, thank you.",0.04
+MSG-EVT-001-20-breakfast-OUT,EVT-001-20-breakfast,SYN-001,2026-09-09T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-001-20-breakfast-IN,EVT-001-20-breakfast,SYN-001,2026-09-09T08:39:00,inbound,patient,"Confirmed, thank you.",0.13
+MSG-EVT-001-20-morning_medication-OUT,EVT-001-20-morning_medication,SYN-001,2026-09-09T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-001-20-morning_medication-IN,EVT-001-20-morning_medication,SYN-001,2026-09-09T09:04:00,inbound,patient,"Confirmed, thank you.",0.1
+MSG-EVT-001-20-lunch_checkin-OUT,EVT-001-20-lunch_checkin,SYN-001,2026-09-09T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-001-20-lunch_checkin-IN,EVT-001-20-lunch_checkin,SYN-001,2026-09-09T12:53:00,inbound,patient,"Confirmed, thank you.",0.13
+MSG-EVT-001-20-evening_medication-OUT,EVT-001-20-evening_medication,SYN-001,2026-09-09T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-001-20-evening_medication-IN,EVT-001-20-evening_medication,SYN-001,2026-09-09T18:08:00,inbound,patient,"Confirmed, thank you.",0.1
+MSG-EVT-001-20-bedtime_checkin-OUT,EVT-001-20-bedtime_checkin,SYN-001,2026-09-09T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-001-20-bedtime_checkin-IN,EVT-001-20-bedtime_checkin,SYN-001,2026-09-09T21:17:00,inbound,patient,"Confirmed, thank you.",0.09
+MSG-EVT-001-21-wake_up-OUT,EVT-001-21-wake_up,SYN-001,2026-09-10T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-001-21-wake_up-IN,EVT-001-21-wake_up,SYN-001,2026-09-10T08:07:00,inbound,patient,"Confirmed, thank you.",0.18
+MSG-EVT-001-21-breakfast-OUT,EVT-001-21-breakfast,SYN-001,2026-09-10T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-001-21-breakfast-IN,EVT-001-21-breakfast,SYN-001,2026-09-10T08:40:00,inbound,patient,"Confirmed, thank you.",0.05
+MSG-EVT-001-21-morning_medication-OUT,EVT-001-21-morning_medication,SYN-001,2026-09-10T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-001-21-morning_medication-IN,EVT-001-21-morning_medication,SYN-001,2026-09-10T09:03:00,inbound,patient,"Confirmed, thank you.",0.12
+MSG-EVT-001-21-lunch_checkin-OUT,EVT-001-21-lunch_checkin,SYN-001,2026-09-10T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-001-21-lunch_checkin-IN,EVT-001-21-lunch_checkin,SYN-001,2026-09-10T12:57:00,inbound,patient,"Confirmed, thank you.",0.07
+MSG-EVT-001-21-evening_medication-OUT,EVT-001-21-evening_medication,SYN-001,2026-09-10T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-001-21-evening_medication-IN,EVT-001-21-evening_medication,SYN-001,2026-09-10T18:05:00,inbound,patient,"Confirmed, thank you.",0.04
+MSG-EVT-001-21-bedtime_checkin-OUT,EVT-001-21-bedtime_checkin,SYN-001,2026-09-10T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-001-21-bedtime_checkin-IN,EVT-001-21-bedtime_checkin,SYN-001,2026-09-10T21:08:00,inbound,patient,"Confirmed, thank you.",0.04
+MSG-EVT-001-22-wake_up-OUT,EVT-001-22-wake_up,SYN-001,2026-09-11T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-001-22-wake_up-IN,EVT-001-22-wake_up,SYN-001,2026-09-11T08:08:00,inbound,patient,"Confirmed, thank you.",0.06
+MSG-EVT-001-22-breakfast-OUT,EVT-001-22-breakfast,SYN-001,2026-09-11T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-001-22-breakfast-IN,EVT-001-22-breakfast,SYN-001,2026-09-11T08:35:00,inbound,patient,"Confirmed, thank you.",0.06
+MSG-EVT-001-22-morning_medication-OUT,EVT-001-22-morning_medication,SYN-001,2026-09-11T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-001-22-morning_medication-IN,EVT-001-22-morning_medication,SYN-001,2026-09-11T09:14:00,inbound,patient,"Confirmed, thank you.",0.1
+MSG-EVT-001-22-lunch_checkin-OUT,EVT-001-22-lunch_checkin,SYN-001,2026-09-11T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-001-22-lunch_checkin-IN,EVT-001-22-lunch_checkin,SYN-001,2026-09-11T12:47:00,inbound,patient,"Confirmed, thank you.",0.13
+MSG-EVT-001-22-evening_medication-OUT,EVT-001-22-evening_medication,SYN-001,2026-09-11T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-001-22-evening_medication-IN,EVT-001-22-evening_medication,SYN-001,2026-09-11T18:10:00,inbound,patient,"Confirmed, thank you.",0.11
+MSG-EVT-001-22-bedtime_checkin-OUT,EVT-001-22-bedtime_checkin,SYN-001,2026-09-11T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-001-22-bedtime_checkin-IN,EVT-001-22-bedtime_checkin,SYN-001,2026-09-11T21:17:00,inbound,patient,"Confirmed, thank you.",0.13
+MSG-EVT-001-23-wake_up-OUT,EVT-001-23-wake_up,SYN-001,2026-09-12T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-001-23-wake_up-IN,EVT-001-23-wake_up,SYN-001,2026-09-12T08:08:00,inbound,patient,"Confirmed, thank you.",0.12
+MSG-EVT-001-23-breakfast-OUT,EVT-001-23-breakfast,SYN-001,2026-09-12T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-001-23-breakfast-IN,EVT-001-23-breakfast,SYN-001,2026-09-12T08:42:00,inbound,patient,"Confirmed, thank you.",0.11
+MSG-EVT-001-23-morning_medication-OUT,EVT-001-23-morning_medication,SYN-001,2026-09-12T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-001-23-morning_medication-IN,EVT-001-23-morning_medication,SYN-001,2026-09-12T09:06:00,inbound,patient,"Confirmed, thank you.",0.07
+MSG-EVT-001-23-lunch_checkin-OUT,EVT-001-23-lunch_checkin,SYN-001,2026-09-12T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-001-23-lunch_checkin-IN,EVT-001-23-lunch_checkin,SYN-001,2026-09-12T12:40:00,inbound,patient,"Confirmed, thank you.",0.1
+MSG-EVT-001-23-evening_medication-OUT,EVT-001-23-evening_medication,SYN-001,2026-09-12T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-001-23-evening_medication-IN,EVT-001-23-evening_medication,SYN-001,2026-09-12T18:15:00,inbound,patient,"Confirmed, thank you.",0.06
+MSG-EVT-001-23-bedtime_checkin-OUT,EVT-001-23-bedtime_checkin,SYN-001,2026-09-12T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-001-23-bedtime_checkin-IN,EVT-001-23-bedtime_checkin,SYN-001,2026-09-12T21:20:00,inbound,patient,"Confirmed, thank you.",0.14
+MSG-EVT-001-24-wake_up-OUT,EVT-001-24-wake_up,SYN-001,2026-09-13T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-001-24-wake_up-IN,EVT-001-24-wake_up,SYN-001,2026-09-13T08:11:00,inbound,patient,"Confirmed, thank you.",0.13
+MSG-EVT-001-24-breakfast-OUT,EVT-001-24-breakfast,SYN-001,2026-09-13T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-001-24-breakfast-IN,EVT-001-24-breakfast,SYN-001,2026-09-13T08:44:00,inbound,patient,"Confirmed, thank you.",0.12
+MSG-EVT-001-24-morning_medication-OUT,EVT-001-24-morning_medication,SYN-001,2026-09-13T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-001-24-morning_medication-IN,EVT-001-24-morning_medication,SYN-001,2026-09-13T09:09:00,inbound,patient,"Confirmed, thank you.",0.03
+MSG-EVT-001-24-lunch_checkin-OUT,EVT-001-24-lunch_checkin,SYN-001,2026-09-13T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-001-24-lunch_checkin-IN,EVT-001-24-lunch_checkin,SYN-001,2026-09-13T12:51:00,inbound,patient,"Confirmed, thank you.",0.0
+MSG-EVT-001-24-evening_medication-OUT,EVT-001-24-evening_medication,SYN-001,2026-09-13T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-001-24-evening_medication-IN,EVT-001-24-evening_medication,SYN-001,2026-09-13T18:06:00,inbound,patient,"Confirmed, thank you.",0.15
+MSG-EVT-001-24-bedtime_checkin-OUT,EVT-001-24-bedtime_checkin,SYN-001,2026-09-13T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-001-24-bedtime_checkin-IN,EVT-001-24-bedtime_checkin,SYN-001,2026-09-13T21:13:00,inbound,patient,"Confirmed, thank you.",0.07
+MSG-EVT-001-25-wake_up-OUT,EVT-001-25-wake_up,SYN-001,2026-09-14T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-001-25-wake_up-IN,EVT-001-25-wake_up,SYN-001,2026-09-14T08:10:00,inbound,patient,"Confirmed, thank you.",0.11
+MSG-EVT-001-25-breakfast-OUT,EVT-001-25-breakfast,SYN-001,2026-09-14T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-001-25-breakfast-IN,EVT-001-25-breakfast,SYN-001,2026-09-14T08:40:00,inbound,patient,"Confirmed, thank you.",0.09
+MSG-EVT-001-25-morning_medication-OUT,EVT-001-25-morning_medication,SYN-001,2026-09-14T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-001-25-morning_medication-IN,EVT-001-25-morning_medication,SYN-001,2026-09-14T09:10:00,inbound,patient,"Confirmed, thank you.",0.04
+MSG-EVT-001-25-lunch_checkin-OUT,EVT-001-25-lunch_checkin,SYN-001,2026-09-14T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-001-25-lunch_checkin-IN,EVT-001-25-lunch_checkin,SYN-001,2026-09-14T12:45:00,inbound,patient,"Confirmed, thank you.",0.04
+MSG-EVT-001-25-evening_medication-OUT,EVT-001-25-evening_medication,SYN-001,2026-09-14T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-001-25-evening_medication-IN,EVT-001-25-evening_medication,SYN-001,2026-09-14T18:15:00,inbound,patient,"Confirmed, thank you.",0.06
+MSG-EVT-001-25-bedtime_checkin-OUT,EVT-001-25-bedtime_checkin,SYN-001,2026-09-14T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-001-25-bedtime_checkin-IN,EVT-001-25-bedtime_checkin,SYN-001,2026-09-14T21:10:00,inbound,patient,"Confirmed, thank you.",0.08
+MSG-EVT-001-26-wake_up-OUT,EVT-001-26-wake_up,SYN-001,2026-09-15T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-001-26-wake_up-IN,EVT-001-26-wake_up,SYN-001,2026-09-15T08:08:00,inbound,patient,"Confirmed, thank you.",0.06
+MSG-EVT-001-26-breakfast-OUT,EVT-001-26-breakfast,SYN-001,2026-09-15T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-001-26-breakfast-IN,EVT-001-26-breakfast,SYN-001,2026-09-15T08:34:00,inbound,patient,"Confirmed, thank you.",0.09
+MSG-EVT-001-26-morning_medication-OUT,EVT-001-26-morning_medication,SYN-001,2026-09-15T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-001-26-morning_medication-IN,EVT-001-26-morning_medication,SYN-001,2026-09-15T09:19:00,inbound,patient,"Confirmed, thank you.",0.09
+MSG-EVT-001-26-lunch_checkin-OUT,EVT-001-26-lunch_checkin,SYN-001,2026-09-15T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-001-26-lunch_checkin-IN,EVT-001-26-lunch_checkin,SYN-001,2026-09-15T12:36:00,inbound,patient,"Confirmed, thank you.",0.1
+MSG-EVT-001-26-evening_medication-OUT,EVT-001-26-evening_medication,SYN-001,2026-09-15T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-001-26-evening_medication-IN,EVT-001-26-evening_medication,SYN-001,2026-09-15T18:02:00,inbound,patient,"Confirmed, thank you.",0.08
+MSG-EVT-001-26-bedtime_checkin-OUT,EVT-001-26-bedtime_checkin,SYN-001,2026-09-15T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-001-26-bedtime_checkin-IN,EVT-001-26-bedtime_checkin,SYN-001,2026-09-15T21:14:00,inbound,patient,"Confirmed, thank you.",0.07
+MSG-EVT-001-27-wake_up-OUT,EVT-001-27-wake_up,SYN-001,2026-09-16T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-001-27-wake_up-IN,EVT-001-27-wake_up,SYN-001,2026-09-16T08:15:00,inbound,patient,"Confirmed, thank you.",0.15
+MSG-EVT-001-27-breakfast-OUT,EVT-001-27-breakfast,SYN-001,2026-09-16T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-001-27-breakfast-IN,EVT-001-27-breakfast,SYN-001,2026-09-16T08:36:00,inbound,patient,"Confirmed, thank you.",0.09
+MSG-EVT-001-27-morning_medication-OUT,EVT-001-27-morning_medication,SYN-001,2026-09-16T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-001-27-morning_medication-IN,EVT-001-27-morning_medication,SYN-001,2026-09-16T09:11:00,inbound,patient,"Confirmed, thank you.",0.14
+MSG-EVT-001-27-lunch_checkin-OUT,EVT-001-27-lunch_checkin,SYN-001,2026-09-16T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-001-27-lunch_checkin-IN,EVT-001-27-lunch_checkin,SYN-001,2026-09-16T12:39:00,inbound,patient,"Confirmed, thank you.",0.1
+MSG-EVT-001-27-evening_medication-OUT,EVT-001-27-evening_medication,SYN-001,2026-09-16T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-001-27-evening_medication-IN,EVT-001-27-evening_medication,SYN-001,2026-09-16T18:12:00,inbound,patient,"Confirmed, thank you.",0.06
+MSG-EVT-001-27-bedtime_checkin-OUT,EVT-001-27-bedtime_checkin,SYN-001,2026-09-16T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-001-27-bedtime_checkin-IN,EVT-001-27-bedtime_checkin,SYN-001,2026-09-16T21:24:00,inbound,patient,"Confirmed, thank you.",0.07
+MSG-EVT-001-28-wake_up-OUT,EVT-001-28-wake_up,SYN-001,2026-09-17T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-001-28-wake_up-IN,EVT-001-28-wake_up,SYN-001,2026-09-17T08:04:00,inbound,patient,"Confirmed, thank you.",0.09
+MSG-EVT-001-28-breakfast-OUT,EVT-001-28-breakfast,SYN-001,2026-09-17T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-001-28-breakfast-IN,EVT-001-28-breakfast,SYN-001,2026-09-17T08:40:00,inbound,patient,"Confirmed, thank you.",0.07
+MSG-EVT-001-28-morning_medication-OUT,EVT-001-28-morning_medication,SYN-001,2026-09-17T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-001-28-morning_medication-IN,EVT-001-28-morning_medication,SYN-001,2026-09-17T09:10:00,inbound,patient,"Confirmed, thank you.",0.13
+MSG-EVT-001-28-lunch_checkin-OUT,EVT-001-28-lunch_checkin,SYN-001,2026-09-17T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-001-28-lunch_checkin-IN,EVT-001-28-lunch_checkin,SYN-001,2026-09-17T12:44:00,inbound,patient,"Confirmed, thank you.",0.13
+MSG-EVT-001-28-evening_medication-OUT,EVT-001-28-evening_medication,SYN-001,2026-09-17T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-001-28-evening_medication-IN,EVT-001-28-evening_medication,SYN-001,2026-09-17T18:33:00,inbound,patient,"Confirmed, thank you.",0.08
+MSG-EVT-001-28-bedtime_checkin-OUT,EVT-001-28-bedtime_checkin,SYN-001,2026-09-17T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-001-28-bedtime_checkin-IN,EVT-001-28-bedtime_checkin,SYN-001,2026-09-17T21:13:00,inbound,patient,"Confirmed, thank you.",0.05
+MSG-EVT-001-29-wake_up-OUT,EVT-001-29-wake_up,SYN-001,2026-09-18T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-001-29-wake_up-IN,EVT-001-29-wake_up,SYN-001,2026-09-18T08:17:00,inbound,patient,"Confirmed, thank you.",0.16
+MSG-EVT-001-29-breakfast-OUT,EVT-001-29-breakfast,SYN-001,2026-09-18T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-001-29-breakfast-IN,EVT-001-29-breakfast,SYN-001,2026-09-18T08:35:00,inbound,patient,"Confirmed, thank you.",0.06
+MSG-EVT-001-29-morning_medication-OUT,EVT-001-29-morning_medication,SYN-001,2026-09-18T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-001-29-morning_medication-IN,EVT-001-29-morning_medication,SYN-001,2026-09-18T09:12:00,inbound,patient,"Confirmed, thank you.",0.1
+MSG-EVT-001-29-lunch_checkin-OUT,EVT-001-29-lunch_checkin,SYN-001,2026-09-18T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-001-29-lunch_checkin-IN,EVT-001-29-lunch_checkin,SYN-001,2026-09-18T12:47:00,inbound,patient,"Confirmed, thank you.",0.03
+MSG-EVT-001-29-evening_medication-OUT,EVT-001-29-evening_medication,SYN-001,2026-09-18T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-001-29-evening_medication-IN,EVT-001-29-evening_medication,SYN-001,2026-09-18T18:05:00,inbound,patient,"Confirmed, thank you.",0.02
+MSG-EVT-001-29-bedtime_checkin-OUT,EVT-001-29-bedtime_checkin,SYN-001,2026-09-18T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-001-29-bedtime_checkin-IN,EVT-001-29-bedtime_checkin,SYN-001,2026-09-18T21:01:00,inbound,patient,"Confirmed, thank you.",0.05
+MSG-EVT-001-30-wake_up-OUT,EVT-001-30-wake_up,SYN-001,2026-09-19T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-001-30-wake_up-IN,EVT-001-30-wake_up,SYN-001,2026-09-19T08:04:00,inbound,patient,"Confirmed, thank you.",0.09
+MSG-EVT-001-30-breakfast-OUT,EVT-001-30-breakfast,SYN-001,2026-09-19T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-001-30-breakfast-IN,EVT-001-30-breakfast,SYN-001,2026-09-19T08:35:00,inbound,patient,"Confirmed, thank you.",0.03
+MSG-EVT-001-30-morning_medication-OUT,EVT-001-30-morning_medication,SYN-001,2026-09-19T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-001-30-morning_medication-IN,EVT-001-30-morning_medication,SYN-001,2026-09-19T09:02:00,inbound,patient,"Confirmed, thank you.",0.06
+MSG-EVT-001-30-lunch_checkin-OUT,EVT-001-30-lunch_checkin,SYN-001,2026-09-19T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-001-30-lunch_checkin-IN,EVT-001-30-lunch_checkin,SYN-001,2026-09-19T12:47:00,inbound,patient,"Confirmed, thank you.",0.03
+MSG-EVT-001-30-evening_medication-OUT,EVT-001-30-evening_medication,SYN-001,2026-09-19T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-001-30-evening_medication-IN,EVT-001-30-evening_medication,SYN-001,2026-09-19T18:06:00,inbound,patient,"Confirmed, thank you.",0.06
+MSG-EVT-001-30-bedtime_checkin-OUT,EVT-001-30-bedtime_checkin,SYN-001,2026-09-19T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-001-30-bedtime_checkin-IN,EVT-001-30-bedtime_checkin,SYN-001,2026-09-19T21:05:00,inbound,patient,"Confirmed, thank you.",0.07
+MSG-EVT-002-01-wake_up-OUT,EVT-002-01-wake_up,SYN-002,2026-08-21T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-002-01-wake_up-IN,EVT-002-01-wake_up,SYN-002,2026-08-21T08:07:00,inbound,patient,"Confirmed, thank you.",0.11
+MSG-EVT-002-01-breakfast-OUT,EVT-002-01-breakfast,SYN-002,2026-08-21T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-002-01-breakfast-IN,EVT-002-01-breakfast,SYN-002,2026-08-21T08:36:00,inbound,patient,"Confirmed, thank you.",0.04
+MSG-EVT-002-01-morning_medication-OUT,EVT-002-01-morning_medication,SYN-002,2026-08-21T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-002-01-morning_medication-IN,EVT-002-01-morning_medication,SYN-002,2026-08-21T09:16:00,inbound,patient,"Confirmed, thank you.",0.0
+MSG-EVT-002-01-lunch_checkin-OUT,EVT-002-01-lunch_checkin,SYN-002,2026-08-21T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-002-01-lunch_checkin-IN,EVT-002-01-lunch_checkin,SYN-002,2026-08-21T12:43:00,inbound,patient,"Confirmed, thank you.",0.03
+MSG-EVT-002-01-evening_medication-OUT,EVT-002-01-evening_medication,SYN-002,2026-08-21T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-002-01-evening_medication-IN,EVT-002-01-evening_medication,SYN-002,2026-08-21T18:16:00,inbound,patient,"Confirmed, thank you.",0.13
+MSG-EVT-002-01-bedtime_checkin-OUT,EVT-002-01-bedtime_checkin,SYN-002,2026-08-21T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-002-01-bedtime_checkin-IN,EVT-002-01-bedtime_checkin,SYN-002,2026-08-21T21:01:00,inbound,patient,"Confirmed, thank you.",0.1
+MSG-EVT-002-02-wake_up-OUT,EVT-002-02-wake_up,SYN-002,2026-08-22T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-002-02-wake_up-IN,EVT-002-02-wake_up,SYN-002,2026-08-22T08:09:00,inbound,patient,"Confirmed, thank you.",0.05
+MSG-EVT-002-02-breakfast-OUT,EVT-002-02-breakfast,SYN-002,2026-08-22T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-002-02-breakfast-IN,EVT-002-02-breakfast,SYN-002,2026-08-22T08:47:00,inbound,patient,"Confirmed, thank you.",0.07
+MSG-EVT-002-02-morning_medication-OUT,EVT-002-02-morning_medication,SYN-002,2026-08-22T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-002-02-morning_medication-IN,EVT-002-02-morning_medication,SYN-002,2026-08-22T09:11:00,inbound,patient,"Confirmed, thank you.",0.08
+MSG-EVT-002-02-lunch_checkin-OUT,EVT-002-02-lunch_checkin,SYN-002,2026-08-22T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-002-02-lunch_checkin-IN,EVT-002-02-lunch_checkin,SYN-002,2026-08-22T12:47:00,inbound,patient,"Confirmed, thank you.",0.02
+MSG-EVT-002-02-evening_medication-OUT,EVT-002-02-evening_medication,SYN-002,2026-08-22T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-002-02-evening_medication-IN,EVT-002-02-evening_medication,SYN-002,2026-08-22T18:11:00,inbound,patient,"Confirmed, thank you.",0.03
+MSG-EVT-002-02-bedtime_checkin-OUT,EVT-002-02-bedtime_checkin,SYN-002,2026-08-22T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-002-02-bedtime_checkin-IN,EVT-002-02-bedtime_checkin,SYN-002,2026-08-22T21:14:00,inbound,patient,"Confirmed, thank you.",0.12
+MSG-EVT-002-03-wake_up-OUT,EVT-002-03-wake_up,SYN-002,2026-08-23T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-002-03-wake_up-IN,EVT-002-03-wake_up,SYN-002,2026-08-23T08:09:00,inbound,patient,"Confirmed, thank you.",0.1
+MSG-EVT-002-03-breakfast-OUT,EVT-002-03-breakfast,SYN-002,2026-08-23T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-002-03-breakfast-IN,EVT-002-03-breakfast,SYN-002,2026-08-23T08:43:00,inbound,patient,"Confirmed, thank you.",0.13
+MSG-EVT-002-03-morning_medication-OUT,EVT-002-03-morning_medication,SYN-002,2026-08-23T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-002-03-morning_medication-IN,EVT-002-03-morning_medication,SYN-002,2026-08-23T09:10:00,inbound,patient,"Confirmed, thank you.",0.08
+MSG-EVT-002-03-lunch_checkin-OUT,EVT-002-03-lunch_checkin,SYN-002,2026-08-23T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-002-03-lunch_checkin-IN,EVT-002-03-lunch_checkin,SYN-002,2026-08-23T12:46:00,inbound,patient,"Confirmed, thank you.",0.07
+MSG-EVT-002-03-evening_medication-OUT,EVT-002-03-evening_medication,SYN-002,2026-08-23T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-002-03-evening_medication-IN,EVT-002-03-evening_medication,SYN-002,2026-08-23T18:16:00,inbound,patient,"Confirmed, thank you.",0.1
+MSG-EVT-002-03-bedtime_checkin-OUT,EVT-002-03-bedtime_checkin,SYN-002,2026-08-23T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-002-03-bedtime_checkin-IN,EVT-002-03-bedtime_checkin,SYN-002,2026-08-23T21:09:00,inbound,patient,"Confirmed, thank you.",0.06
+MSG-EVT-002-04-wake_up-OUT,EVT-002-04-wake_up,SYN-002,2026-08-24T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-002-04-wake_up-IN,EVT-002-04-wake_up,SYN-002,2026-08-24T08:06:00,inbound,patient,"Confirmed, thank you.",0.04
+MSG-EVT-002-04-breakfast-OUT,EVT-002-04-breakfast,SYN-002,2026-08-24T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-002-04-breakfast-IN,EVT-002-04-breakfast,SYN-002,2026-08-24T08:41:00,inbound,patient,"Confirmed, thank you.",0.06
+MSG-EVT-002-04-morning_medication-OUT,EVT-002-04-morning_medication,SYN-002,2026-08-24T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-002-04-morning_medication-IN,EVT-002-04-morning_medication,SYN-002,2026-08-24T09:09:00,inbound,patient,"Confirmed, thank you.",0.1
+MSG-EVT-002-04-lunch_checkin-OUT,EVT-002-04-lunch_checkin,SYN-002,2026-08-24T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-002-04-lunch_checkin-IN,EVT-002-04-lunch_checkin,SYN-002,2026-08-24T12:46:00,inbound,patient,"Confirmed, thank you.",0.06
+MSG-EVT-002-04-evening_medication-OUT,EVT-002-04-evening_medication,SYN-002,2026-08-24T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-002-04-evening_medication-IN,EVT-002-04-evening_medication,SYN-002,2026-08-24T18:21:00,inbound,patient,"Confirmed, thank you.",0.08
+MSG-EVT-002-04-bedtime_checkin-OUT,EVT-002-04-bedtime_checkin,SYN-002,2026-08-24T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-002-04-bedtime_checkin-IN,EVT-002-04-bedtime_checkin,SYN-002,2026-08-24T21:13:00,inbound,patient,"Confirmed, thank you.",0.08
+MSG-EVT-002-05-wake_up-OUT,EVT-002-05-wake_up,SYN-002,2026-08-25T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-002-05-wake_up-IN,EVT-002-05-wake_up,SYN-002,2026-08-25T08:09:00,inbound,patient,"Confirmed, thank you.",0.05
+MSG-EVT-002-05-breakfast-OUT,EVT-002-05-breakfast,SYN-002,2026-08-25T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-002-05-breakfast-IN,EVT-002-05-breakfast,SYN-002,2026-08-25T08:36:00,inbound,patient,"Confirmed, thank you.",0.03
+MSG-EVT-002-05-morning_medication-OUT,EVT-002-05-morning_medication,SYN-002,2026-08-25T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-002-05-morning_medication-IN,EVT-002-05-morning_medication,SYN-002,2026-08-25T09:07:00,inbound,patient,"Confirmed, thank you.",0.05
+MSG-EVT-002-05-lunch_checkin-OUT,EVT-002-05-lunch_checkin,SYN-002,2026-08-25T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-002-05-lunch_checkin-IN,EVT-002-05-lunch_checkin,SYN-002,2026-08-25T12:50:00,inbound,patient,"Confirmed, thank you.",0.02
+MSG-EVT-002-05-evening_medication-OUT,EVT-002-05-evening_medication,SYN-002,2026-08-25T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-002-05-evening_medication-IN,EVT-002-05-evening_medication,SYN-002,2026-08-25T18:11:00,inbound,patient,"Confirmed, thank you.",0.09
+MSG-EVT-002-05-bedtime_checkin-OUT,EVT-002-05-bedtime_checkin,SYN-002,2026-08-25T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-002-05-bedtime_checkin-IN,EVT-002-05-bedtime_checkin,SYN-002,2026-08-25T21:13:00,inbound,patient,"Confirmed, thank you.",0.08
+MSG-EVT-002-06-wake_up-OUT,EVT-002-06-wake_up,SYN-002,2026-08-26T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-002-06-wake_up-IN,EVT-002-06-wake_up,SYN-002,2026-08-26T08:09:00,inbound,patient,"Confirmed, thank you.",0.17
+MSG-EVT-002-06-breakfast-OUT,EVT-002-06-breakfast,SYN-002,2026-08-26T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-002-06-breakfast-IN,EVT-002-06-breakfast,SYN-002,2026-08-26T08:42:00,inbound,patient,"Confirmed, thank you.",0.1
+MSG-EVT-002-06-morning_medication-OUT,EVT-002-06-morning_medication,SYN-002,2026-08-26T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-002-06-morning_medication-IN,EVT-002-06-morning_medication,SYN-002,2026-08-26T09:06:00,inbound,patient,"Confirmed, thank you.",0.1
+MSG-EVT-002-06-lunch_checkin-OUT,EVT-002-06-lunch_checkin,SYN-002,2026-08-26T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-002-06-lunch_checkin-IN,EVT-002-06-lunch_checkin,SYN-002,2026-08-26T12:48:00,inbound,patient,"Confirmed, thank you.",0.08
+MSG-EVT-002-06-evening_medication-OUT,EVT-002-06-evening_medication,SYN-002,2026-08-26T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-002-06-evening_medication-IN,EVT-002-06-evening_medication,SYN-002,2026-08-26T18:18:00,inbound,patient,"Confirmed, thank you.",0.07
+MSG-EVT-002-06-bedtime_checkin-OUT,EVT-002-06-bedtime_checkin,SYN-002,2026-08-26T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-002-06-bedtime_checkin-IN,EVT-002-06-bedtime_checkin,SYN-002,2026-08-26T21:06:00,inbound,patient,"Confirmed, thank you.",0.12
+MSG-EVT-002-07-wake_up-OUT,EVT-002-07-wake_up,SYN-002,2026-08-27T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-002-07-wake_up-IN,EVT-002-07-wake_up,SYN-002,2026-08-27T08:09:00,inbound,patient,"Confirmed, thank you.",0.07
+MSG-EVT-002-07-breakfast-OUT,EVT-002-07-breakfast,SYN-002,2026-08-27T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-002-07-breakfast-IN,EVT-002-07-breakfast,SYN-002,2026-08-27T08:43:00,inbound,patient,"Confirmed, thank you.",0.09
+MSG-EVT-002-07-morning_medication-OUT,EVT-002-07-morning_medication,SYN-002,2026-08-27T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-002-07-morning_medication-IN,EVT-002-07-morning_medication,SYN-002,2026-08-27T09:16:00,inbound,patient,"Confirmed, thank you.",0.07
+MSG-EVT-002-07-lunch_checkin-OUT,EVT-002-07-lunch_checkin,SYN-002,2026-08-27T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-002-07-lunch_checkin-IN,EVT-002-07-lunch_checkin,SYN-002,2026-08-27T12:43:00,inbound,patient,"Confirmed, thank you.",0.13
+MSG-EVT-002-07-evening_medication-OUT,EVT-002-07-evening_medication,SYN-002,2026-08-27T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-002-07-evening_medication-IN,EVT-002-07-evening_medication,SYN-002,2026-08-27T18:03:00,inbound,patient,"Confirmed, thank you.",0.07
+MSG-EVT-002-07-bedtime_checkin-OUT,EVT-002-07-bedtime_checkin,SYN-002,2026-08-27T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-002-07-bedtime_checkin-IN,EVT-002-07-bedtime_checkin,SYN-002,2026-08-27T21:09:00,inbound,patient,"Confirmed, thank you.",0.0
+MSG-EVT-002-08-wake_up-OUT,EVT-002-08-wake_up,SYN-002,2026-08-28T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-002-08-wake_up-IN,EVT-002-08-wake_up,SYN-002,2026-08-28T08:05:00,inbound,patient,"Confirmed, thank you.",0.05
+MSG-EVT-002-08-breakfast-OUT,EVT-002-08-breakfast,SYN-002,2026-08-28T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-002-08-breakfast-IN,EVT-002-08-breakfast,SYN-002,2026-08-28T08:42:00,inbound,patient,"Confirmed, thank you.",0.07
+MSG-EVT-002-08-morning_medication-OUT,EVT-002-08-morning_medication,SYN-002,2026-08-28T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-002-08-morning_medication-IN,EVT-002-08-morning_medication,SYN-002,2026-08-28T09:03:00,inbound,patient,"Confirmed, thank you.",0.1
+MSG-EVT-002-08-lunch_checkin-OUT,EVT-002-08-lunch_checkin,SYN-002,2026-08-28T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-002-08-lunch_checkin-IN,EVT-002-08-lunch_checkin,SYN-002,2026-08-28T12:35:00,inbound,patient,"Confirmed, thank you.",0.06
+MSG-EVT-002-08-evening_medication-OUT,EVT-002-08-evening_medication,SYN-002,2026-08-28T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-002-08-evening_medication-IN,EVT-002-08-evening_medication,SYN-002,2026-08-28T18:10:00,inbound,patient,"Confirmed, thank you.",0.1
+MSG-EVT-002-08-bedtime_checkin-OUT,EVT-002-08-bedtime_checkin,SYN-002,2026-08-28T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-002-08-bedtime_checkin-IN,EVT-002-08-bedtime_checkin,SYN-002,2026-08-28T21:06:00,inbound,patient,"Confirmed, thank you.",0.05
+MSG-EVT-002-09-wake_up-OUT,EVT-002-09-wake_up,SYN-002,2026-08-29T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-002-09-wake_up-IN,EVT-002-09-wake_up,SYN-002,2026-08-29T08:17:00,inbound,patient,"Confirmed, thank you.",0.0
+MSG-EVT-002-09-breakfast-OUT,EVT-002-09-breakfast,SYN-002,2026-08-29T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-002-09-breakfast-IN,EVT-002-09-breakfast,SYN-002,2026-08-29T08:37:00,inbound,patient,"Confirmed, thank you.",0.09
+MSG-EVT-002-09-morning_medication-OUT,EVT-002-09-morning_medication,SYN-002,2026-08-29T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-002-09-morning_medication-IN,EVT-002-09-morning_medication,SYN-002,2026-08-29T09:09:00,inbound,patient,"Confirmed, thank you.",0.11
+MSG-EVT-002-09-lunch_checkin-OUT,EVT-002-09-lunch_checkin,SYN-002,2026-08-29T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-002-09-lunch_checkin-IN,EVT-002-09-lunch_checkin,SYN-002,2026-08-29T12:38:00,inbound,patient,"Confirmed, thank you.",0.14
+MSG-EVT-002-09-evening_medication-OUT,EVT-002-09-evening_medication,SYN-002,2026-08-29T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-002-09-evening_medication-IN,EVT-002-09-evening_medication,SYN-002,2026-08-29T18:02:00,inbound,patient,"Confirmed, thank you.",0.04
+MSG-EVT-002-09-bedtime_checkin-OUT,EVT-002-09-bedtime_checkin,SYN-002,2026-08-29T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-002-09-bedtime_checkin-IN,EVT-002-09-bedtime_checkin,SYN-002,2026-08-29T21:17:00,inbound,patient,"Confirmed, thank you.",0.11
+MSG-EVT-002-10-wake_up-OUT,EVT-002-10-wake_up,SYN-002,2026-08-30T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-002-10-wake_up-IN,EVT-002-10-wake_up,SYN-002,2026-08-30T08:03:00,inbound,patient,"Confirmed, thank you.",0.08
+MSG-EVT-002-10-breakfast-OUT,EVT-002-10-breakfast,SYN-002,2026-08-30T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-002-10-breakfast-IN,EVT-002-10-breakfast,SYN-002,2026-08-30T08:31:00,inbound,patient,"Confirmed, thank you.",0.11
+MSG-EVT-002-10-morning_medication-OUT,EVT-002-10-morning_medication,SYN-002,2026-08-30T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-002-10-morning_medication-IN,EVT-002-10-morning_medication,SYN-002,2026-08-30T09:12:00,inbound,patient,"Confirmed, thank you.",0.04
+MSG-EVT-002-10-lunch_checkin-OUT,EVT-002-10-lunch_checkin,SYN-002,2026-08-30T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-002-10-lunch_checkin-IN,EVT-002-10-lunch_checkin,SYN-002,2026-08-30T12:41:00,inbound,patient,"Confirmed, thank you.",0.15
+MSG-EVT-002-10-evening_medication-OUT,EVT-002-10-evening_medication,SYN-002,2026-08-30T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-002-10-evening_medication-IN,EVT-002-10-evening_medication,SYN-002,2026-08-30T18:12:00,inbound,patient,"Confirmed, thank you.",0.0
+MSG-EVT-002-10-bedtime_checkin-OUT,EVT-002-10-bedtime_checkin,SYN-002,2026-08-30T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-002-10-bedtime_checkin-IN,EVT-002-10-bedtime_checkin,SYN-002,2026-08-30T21:06:00,inbound,patient,"Confirmed, thank you.",0.08
+MSG-EVT-002-11-wake_up-OUT,EVT-002-11-wake_up,SYN-002,2026-08-31T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-002-11-wake_up-IN,EVT-002-11-wake_up,SYN-002,2026-08-31T08:01:00,inbound,patient,"Confirmed, thank you.",0.02
+MSG-EVT-002-11-breakfast-OUT,EVT-002-11-breakfast,SYN-002,2026-08-31T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-002-11-breakfast-IN,EVT-002-11-breakfast,SYN-002,2026-08-31T08:39:00,inbound,patient,"Confirmed, thank you.",0.13
+MSG-EVT-002-11-morning_medication-OUT,EVT-002-11-morning_medication,SYN-002,2026-08-31T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-002-11-morning_medication-IN,EVT-002-11-morning_medication,SYN-002,2026-08-31T09:08:00,inbound,patient,"Confirmed, thank you.",0.04
+MSG-EVT-002-11-lunch_checkin-OUT,EVT-002-11-lunch_checkin,SYN-002,2026-08-31T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-002-11-lunch_checkin-IN,EVT-002-11-lunch_checkin,SYN-002,2026-08-31T12:37:00,inbound,patient,"Confirmed, thank you.",0.14
+MSG-EVT-002-11-evening_medication-OUT,EVT-002-11-evening_medication,SYN-002,2026-08-31T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-002-11-evening_medication-IN,EVT-002-11-evening_medication,SYN-002,2026-08-31T18:08:00,inbound,patient,"Confirmed, thank you.",0.05
+MSG-EVT-002-11-bedtime_checkin-OUT,EVT-002-11-bedtime_checkin,SYN-002,2026-08-31T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-002-11-bedtime_checkin-IN,EVT-002-11-bedtime_checkin,SYN-002,2026-08-31T21:14:00,inbound,patient,"Confirmed, thank you.",0.07
+MSG-EVT-002-12-wake_up-OUT,EVT-002-12-wake_up,SYN-002,2026-09-01T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-002-12-wake_up-IN,EVT-002-12-wake_up,SYN-002,2026-09-01T08:03:00,inbound,patient,"Confirmed, thank you.",0.05
+MSG-EVT-002-12-breakfast-OUT,EVT-002-12-breakfast,SYN-002,2026-09-01T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-002-12-breakfast-IN,EVT-002-12-breakfast,SYN-002,2026-09-01T08:41:00,inbound,patient,"Confirmed, thank you.",0.14
+MSG-EVT-002-12-morning_medication-OUT,EVT-002-12-morning_medication,SYN-002,2026-09-01T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-002-12-morning_medication-IN,EVT-002-12-morning_medication,SYN-002,2026-09-01T09:11:00,inbound,patient,"Confirmed, thank you.",0.05
+MSG-EVT-002-12-lunch_checkin-OUT,EVT-002-12-lunch_checkin,SYN-002,2026-09-01T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-002-12-lunch_checkin-IN,EVT-002-12-lunch_checkin,SYN-002,2026-09-01T12:53:00,inbound,patient,"Confirmed, thank you.",0.1
+MSG-EVT-002-12-evening_medication-OUT,EVT-002-12-evening_medication,SYN-002,2026-09-01T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-002-12-evening_medication-IN,EVT-002-12-evening_medication,SYN-002,2026-09-01T18:13:00,inbound,patient,"Confirmed, thank you.",0.14
+MSG-EVT-002-12-bedtime_checkin-OUT,EVT-002-12-bedtime_checkin,SYN-002,2026-09-01T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-002-12-bedtime_checkin-IN,EVT-002-12-bedtime_checkin,SYN-002,2026-09-01T21:13:00,inbound,patient,"Confirmed, thank you.",0.11
+MSG-EVT-002-13-wake_up-OUT,EVT-002-13-wake_up,SYN-002,2026-09-02T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-002-13-wake_up-IN,EVT-002-13-wake_up,SYN-002,2026-09-02T08:11:00,inbound,patient,"Confirmed, thank you.",0.05
+MSG-EVT-002-13-breakfast-OUT,EVT-002-13-breakfast,SYN-002,2026-09-02T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-002-13-breakfast-IN,EVT-002-13-breakfast,SYN-002,2026-09-02T08:40:00,inbound,patient,"Confirmed, thank you.",0.07
+MSG-EVT-002-13-morning_medication-OUT,EVT-002-13-morning_medication,SYN-002,2026-09-02T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-002-13-morning_medication-IN,EVT-002-13-morning_medication,SYN-002,2026-09-02T09:07:00,inbound,patient,"Confirmed, thank you.",0.09
+MSG-EVT-002-13-lunch_checkin-OUT,EVT-002-13-lunch_checkin,SYN-002,2026-09-02T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-002-13-lunch_checkin-IN,EVT-002-13-lunch_checkin,SYN-002,2026-09-02T12:43:00,inbound,patient,"Confirmed, thank you.",0.07
+MSG-EVT-002-13-evening_medication-OUT,EVT-002-13-evening_medication,SYN-002,2026-09-02T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-002-13-evening_medication-IN,EVT-002-13-evening_medication,SYN-002,2026-09-02T18:19:00,inbound,patient,"Confirmed, thank you.",0.07
+MSG-EVT-002-13-bedtime_checkin-OUT,EVT-002-13-bedtime_checkin,SYN-002,2026-09-02T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-002-13-bedtime_checkin-IN,EVT-002-13-bedtime_checkin,SYN-002,2026-09-02T21:08:00,inbound,patient,"Confirmed, thank you.",0.1
+MSG-EVT-002-14-wake_up-OUT,EVT-002-14-wake_up,SYN-002,2026-09-03T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-002-14-wake_up-IN,EVT-002-14-wake_up,SYN-002,2026-09-03T08:08:00,inbound,patient,"Confirmed, thank you.",0.12
+MSG-EVT-002-14-breakfast-OUT,EVT-002-14-breakfast,SYN-002,2026-09-03T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-002-14-breakfast-IN,EVT-002-14-breakfast,SYN-002,2026-09-03T08:46:00,inbound,patient,"Confirmed, thank you.",0.09
+MSG-EVT-002-14-morning_medication-OUT,EVT-002-14-morning_medication,SYN-002,2026-09-03T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-002-14-morning_medication-IN,EVT-002-14-morning_medication,SYN-002,2026-09-03T09:23:00,inbound,patient,"Confirmed, thank you.",0.15
+MSG-EVT-002-14-lunch_checkin-OUT,EVT-002-14-lunch_checkin,SYN-002,2026-09-03T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-002-14-lunch_checkin-IN,EVT-002-14-lunch_checkin,SYN-002,2026-09-03T12:36:00,inbound,patient,"Confirmed, thank you.",0.11
+MSG-EVT-002-14-evening_medication-OUT,EVT-002-14-evening_medication,SYN-002,2026-09-03T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-002-14-evening_medication-IN,EVT-002-14-evening_medication,SYN-002,2026-09-03T18:12:00,inbound,patient,"Confirmed, thank you.",0.09
+MSG-EVT-002-14-bedtime_checkin-OUT,EVT-002-14-bedtime_checkin,SYN-002,2026-09-03T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-002-14-bedtime_checkin-IN,EVT-002-14-bedtime_checkin,SYN-002,2026-09-03T21:04:00,inbound,patient,"Confirmed, thank you.",0.09
+MSG-EVT-002-15-wake_up-OUT,EVT-002-15-wake_up,SYN-002,2026-09-04T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-002-15-wake_up-IN,EVT-002-15-wake_up,SYN-002,2026-09-04T08:02:00,inbound,patient,"Confirmed, thank you.",0.09
+MSG-EVT-002-15-breakfast-OUT,EVT-002-15-breakfast,SYN-002,2026-09-04T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-002-15-breakfast-IN,EVT-002-15-breakfast,SYN-002,2026-09-04T08:41:00,inbound,patient,"Confirmed, thank you.",0.07
+MSG-EVT-002-15-morning_medication-OUT,EVT-002-15-morning_medication,SYN-002,2026-09-04T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-002-15-morning_medication-IN,EVT-002-15-morning_medication,SYN-002,2026-09-04T09:15:00,inbound,patient,"Confirmed, thank you.",0.11
+MSG-EVT-002-15-lunch_checkin-OUT,EVT-002-15-lunch_checkin,SYN-002,2026-09-04T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-002-15-lunch_checkin-IN,EVT-002-15-lunch_checkin,SYN-002,2026-09-04T12:53:00,inbound,patient,"Confirmed, thank you.",0.08
+MSG-EVT-002-15-evening_medication-OUT,EVT-002-15-evening_medication,SYN-002,2026-09-04T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-002-15-evening_medication-IN,EVT-002-15-evening_medication,SYN-002,2026-09-04T18:11:00,inbound,patient,"Confirmed, thank you.",0.12
+MSG-EVT-002-15-bedtime_checkin-OUT,EVT-002-15-bedtime_checkin,SYN-002,2026-09-04T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-002-15-bedtime_checkin-IN,EVT-002-15-bedtime_checkin,SYN-002,2026-09-04T21:13:00,inbound,patient,"Confirmed, thank you.",0.07
+MSG-EVT-002-16-wake_up-OUT,EVT-002-16-wake_up,SYN-002,2026-09-05T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-002-16-wake_up-IN,EVT-002-16-wake_up,SYN-002,2026-09-05T08:08:00,inbound,patient,"Confirmed, thank you.",0.04
+MSG-EVT-002-16-breakfast-OUT,EVT-002-16-breakfast,SYN-002,2026-09-05T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-002-16-breakfast-IN,EVT-002-16-breakfast,SYN-002,2026-09-05T08:41:00,inbound,patient,"Confirmed, thank you.",0.12
+MSG-EVT-002-16-morning_medication-OUT,EVT-002-16-morning_medication,SYN-002,2026-09-05T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-002-16-morning_medication-IN,EVT-002-16-morning_medication,SYN-002,2026-09-05T09:16:00,inbound,patient,"Confirmed, thank you.",0.11
+MSG-EVT-002-16-lunch_checkin-OUT,EVT-002-16-lunch_checkin,SYN-002,2026-09-05T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-002-16-lunch_checkin-IN,EVT-002-16-lunch_checkin,SYN-002,2026-09-05T12:50:00,inbound,patient,"Confirmed, thank you.",0.09
+MSG-EVT-002-16-evening_medication-OUT,EVT-002-16-evening_medication,SYN-002,2026-09-05T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-002-16-evening_medication-IN,EVT-002-16-evening_medication,SYN-002,2026-09-05T18:13:00,inbound,patient,"Confirmed, thank you.",0.1
+MSG-EVT-002-16-bedtime_checkin-OUT,EVT-002-16-bedtime_checkin,SYN-002,2026-09-05T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-002-16-bedtime_checkin-IN,EVT-002-16-bedtime_checkin,SYN-002,2026-09-05T21:11:00,inbound,patient,"Confirmed, thank you.",0.11
+MSG-EVT-002-17-wake_up-OUT,EVT-002-17-wake_up,SYN-002,2026-09-06T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-002-17-wake_up-IN,EVT-002-17-wake_up,SYN-002,2026-09-06T08:03:00,inbound,patient,"Confirmed, thank you.",0.13
+MSG-EVT-002-17-breakfast-OUT,EVT-002-17-breakfast,SYN-002,2026-09-06T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-002-17-breakfast-IN,EVT-002-17-breakfast,SYN-002,2026-09-06T08:42:00,inbound,patient,"Confirmed, thank you.",0.07
+MSG-EVT-002-17-morning_medication-OUT,EVT-002-17-morning_medication,SYN-002,2026-09-06T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-002-17-morning_medication-IN,EVT-002-17-morning_medication,SYN-002,2026-09-06T09:10:00,inbound,patient,"Confirmed, thank you.",0.05
+MSG-EVT-002-17-lunch_checkin-OUT,EVT-002-17-lunch_checkin,SYN-002,2026-09-06T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-002-17-lunch_checkin-IN,EVT-002-17-lunch_checkin,SYN-002,2026-09-06T12:33:00,inbound,patient,"Confirmed, thank you.",0.05
+MSG-EVT-002-17-evening_medication-OUT,EVT-002-17-evening_medication,SYN-002,2026-09-06T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-002-17-evening_medication-IN,EVT-002-17-evening_medication,SYN-002,2026-09-06T18:31:00,inbound,patient,"Confirmed, thank you.",0.18
+MSG-EVT-002-17-bedtime_checkin-OUT,EVT-002-17-bedtime_checkin,SYN-002,2026-09-06T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-002-17-bedtime_checkin-IN,EVT-002-17-bedtime_checkin,SYN-002,2026-09-06T21:10:00,inbound,patient,"Confirmed, thank you.",0.12
+MSG-EVT-002-18-wake_up-OUT,EVT-002-18-wake_up,SYN-002,2026-09-07T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-002-18-wake_up-IN,EVT-002-18-wake_up,SYN-002,2026-09-07T08:09:00,inbound,patient,"Confirmed, thank you.",0.13
+MSG-EVT-002-18-breakfast-OUT,EVT-002-18-breakfast,SYN-002,2026-09-07T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-002-18-breakfast-IN,EVT-002-18-breakfast,SYN-002,2026-09-07T08:40:00,inbound,patient,"Confirmed, thank you.",0.21
+MSG-EVT-002-18-morning_medication-OUT,EVT-002-18-morning_medication,SYN-002,2026-09-07T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-002-18-morning_medication-IN,EVT-002-18-morning_medication,SYN-002,2026-09-07T09:06:00,inbound,patient,"Confirmed, thank you.",0.12
+MSG-EVT-002-18-lunch_checkin-OUT,EVT-002-18-lunch_checkin,SYN-002,2026-09-07T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-002-18-lunch_checkin-IN,EVT-002-18-lunch_checkin,SYN-002,2026-09-07T13:00:00,inbound,patient,"Confirmed, thank you.",0.21
+MSG-EVT-002-18-evening_medication-OUT,EVT-002-18-evening_medication,SYN-002,2026-09-07T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-002-18-evening_medication-IN,EVT-002-18-evening_medication,SYN-002,2026-09-07T18:16:00,inbound,patient,"Confirmed, thank you.",0.14
+MSG-EVT-002-18-bedtime_checkin-OUT,EVT-002-18-bedtime_checkin,SYN-002,2026-09-07T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-002-18-bedtime_checkin-IN,EVT-002-18-bedtime_checkin,SYN-002,2026-09-07T21:11:00,inbound,patient,"Confirmed, thank you.",0.1
+MSG-EVT-002-19-wake_up-OUT,EVT-002-19-wake_up,SYN-002,2026-09-08T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-002-19-wake_up-IN,EVT-002-19-wake_up,SYN-002,2026-09-08T08:12:00,inbound,patient,"Confirmed, thank you.",0.17
+MSG-EVT-002-19-breakfast-OUT,EVT-002-19-breakfast,SYN-002,2026-09-08T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-002-19-breakfast-IN,EVT-002-19-breakfast,SYN-002,2026-09-08T08:41:00,inbound,patient,"Confirmed, thank you.",0.11
+MSG-EVT-002-19-morning_medication-OUT,EVT-002-19-morning_medication,SYN-002,2026-09-08T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-002-19-morning_medication-IN,EVT-002-19-morning_medication,SYN-002,2026-09-08T09:20:00,inbound,patient,"Confirmed, thank you.",0.18
+MSG-EVT-002-19-lunch_checkin-OUT,EVT-002-19-lunch_checkin,SYN-002,2026-09-08T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-002-19-lunch_checkin-IN,EVT-002-19-lunch_checkin,SYN-002,2026-09-08T12:46:00,inbound,patient,"Confirmed, thank you.",0.15
+MSG-EVT-002-19-evening_medication-OUT,EVT-002-19-evening_medication,SYN-002,2026-09-08T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-002-19-evening_medication-IN,EVT-002-19-evening_medication,SYN-002,2026-09-08T18:14:00,inbound,patient,"Confirmed, thank you.",0.15
+MSG-EVT-002-19-bedtime_checkin-OUT,EVT-002-19-bedtime_checkin,SYN-002,2026-09-08T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-002-19-bedtime_checkin-IN,EVT-002-19-bedtime_checkin,SYN-002,2026-09-08T21:11:00,inbound,patient,"Confirmed, thank you.",0.21
+MSG-EVT-002-20-wake_up-OUT,EVT-002-20-wake_up,SYN-002,2026-09-09T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-002-20-wake_up-IN,EVT-002-20-wake_up,SYN-002,2026-09-09T08:15:00,inbound,patient,"Confirmed, thank you.",0.19
+MSG-EVT-002-20-breakfast-OUT,EVT-002-20-breakfast,SYN-002,2026-09-09T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-002-20-breakfast-IN,EVT-002-20-breakfast,SYN-002,2026-09-09T08:47:00,inbound,patient,"Confirmed, thank you.",0.14
+MSG-EVT-002-20-morning_medication-OUT,EVT-002-20-morning_medication,SYN-002,2026-09-09T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-002-20-morning_medication-IN,EVT-002-20-morning_medication,SYN-002,2026-09-09T09:08:00,inbound,patient,"Confirmed, thank you.",0.24
+MSG-EVT-002-20-lunch_checkin-OUT,EVT-002-20-lunch_checkin,SYN-002,2026-09-09T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-002-20-lunch_checkin-IN,EVT-002-20-lunch_checkin,SYN-002,2026-09-09T12:50:00,inbound,patient,"Confirmed, thank you.",0.25
+MSG-EVT-002-20-evening_medication-OUT,EVT-002-20-evening_medication,SYN-002,2026-09-09T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-002-20-evening_medication-IN,EVT-002-20-evening_medication,SYN-002,2026-09-09T18:32:00,inbound,patient,"Confirmed, thank you.",0.21
+MSG-EVT-002-20-bedtime_checkin-OUT,EVT-002-20-bedtime_checkin,SYN-002,2026-09-09T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-002-20-bedtime_checkin-IN,EVT-002-20-bedtime_checkin,SYN-002,2026-09-09T21:22:00,inbound,patient,"Confirmed, thank you.",0.12
+MSG-EVT-002-21-wake_up-OUT,EVT-002-21-wake_up,SYN-002,2026-09-10T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-002-21-wake_up-IN,EVT-002-21-wake_up,SYN-002,2026-09-10T08:23:00,inbound,patient,"Confirmed, thank you.",0.18
+MSG-EVT-002-21-breakfast-OUT,EVT-002-21-breakfast,SYN-002,2026-09-10T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-002-21-breakfast-IN,EVT-002-21-breakfast,SYN-002,2026-09-10T08:36:00,inbound,patient,"Confirmed, thank you.",0.19
+MSG-EVT-002-21-morning_medication-OUT,EVT-002-21-morning_medication,SYN-002,2026-09-10T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-002-21-morning_medication-IN,EVT-002-21-morning_medication,SYN-002,2026-09-10T09:15:00,inbound,patient,"Confirmed, thank you.",0.22
+MSG-EVT-002-21-lunch_checkin-OUT,EVT-002-21-lunch_checkin,SYN-002,2026-09-10T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-002-21-lunch_checkin-IN,EVT-002-21-lunch_checkin,SYN-002,2026-09-10T12:59:00,inbound,patient,"Confirmed, thank you.",0.22
+MSG-EVT-002-21-evening_medication-OUT,EVT-002-21-evening_medication,SYN-002,2026-09-10T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-002-21-evening_medication-IN,EVT-002-21-evening_medication,SYN-002,2026-09-10T18:22:00,inbound,patient,"Confirmed, thank you.",0.21
+MSG-EVT-002-21-bedtime_checkin-OUT,EVT-002-21-bedtime_checkin,SYN-002,2026-09-10T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-002-21-bedtime_checkin-IN,EVT-002-21-bedtime_checkin,SYN-002,2026-09-10T21:23:00,inbound,patient,"Confirmed, thank you.",0.2
+MSG-EVT-002-22-wake_up-OUT,EVT-002-22-wake_up,SYN-002,2026-09-11T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-002-22-wake_up-IN,EVT-002-22-wake_up,SYN-002,2026-09-11T08:10:00,inbound,patient,"Confirmed, thank you.",0.25
+MSG-EVT-002-22-breakfast-OUT,EVT-002-22-breakfast,SYN-002,2026-09-11T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-002-22-breakfast-IN,EVT-002-22-breakfast,SYN-002,2026-09-11T08:36:00,inbound,patient,"Confirmed, thank you.",0.16
+MSG-EVT-002-22-morning_medication-OUT,EVT-002-22-morning_medication,SYN-002,2026-09-11T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-002-22-morning_medication-IN,EVT-002-22-morning_medication,SYN-002,2026-09-11T09:17:00,inbound,patient,"Confirmed, thank you.",0.18
+MSG-EVT-002-22-lunch_checkin-OUT,EVT-002-22-lunch_checkin,SYN-002,2026-09-11T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-002-22-lunch_checkin-IN,EVT-002-22-lunch_checkin,SYN-002,2026-09-11T12:36:00,inbound,patient,"Confirmed, thank you.",0.19
+MSG-EVT-002-22-evening_medication-OUT,EVT-002-22-evening_medication,SYN-002,2026-09-11T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-002-22-evening_medication-IN,EVT-002-22-evening_medication,SYN-002,2026-09-11T18:17:00,inbound,patient,"Confirmed, thank you.",0.16
+MSG-EVT-002-22-bedtime_checkin-OUT,EVT-002-22-bedtime_checkin,SYN-002,2026-09-11T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-002-22-bedtime_checkin-IN,EVT-002-22-bedtime_checkin,SYN-002,2026-09-11T21:18:00,inbound,patient,"Confirmed, thank you.",0.17
+MSG-EVT-002-23-wake_up-OUT,EVT-002-23-wake_up,SYN-002,2026-09-12T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-002-23-wake_up-IN,EVT-002-23-wake_up,SYN-002,2026-09-12T08:11:00,inbound,patient,"Confirmed, thank you.",0.29
+MSG-EVT-002-23-breakfast-OUT,EVT-002-23-breakfast,SYN-002,2026-09-12T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-002-23-breakfast-IN,EVT-002-23-breakfast,SYN-002,2026-09-12T08:39:00,inbound,patient,"Confirmed, thank you.",0.27
+MSG-EVT-002-23-morning_medication-OUT,EVT-002-23-morning_medication,SYN-002,2026-09-12T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-002-23-morning_medication-IN,EVT-002-23-morning_medication,SYN-002,2026-09-12T09:14:00,inbound,patient,"Confirmed, thank you.",0.23
+MSG-EVT-002-23-lunch_checkin-OUT,EVT-002-23-lunch_checkin,SYN-002,2026-09-12T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-002-23-lunch_checkin-IN,EVT-002-23-lunch_checkin,SYN-002,2026-09-12T12:40:00,inbound,patient,"Confirmed, thank you.",0.16
+MSG-EVT-002-23-evening_medication-OUT,EVT-002-23-evening_medication,SYN-002,2026-09-12T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-002-23-evening_medication-IN,EVT-002-23-evening_medication,SYN-002,2026-09-12T18:14:00,inbound,patient,"Confirmed, thank you.",0.17
+MSG-EVT-002-23-bedtime_checkin-OUT,EVT-002-23-bedtime_checkin,SYN-002,2026-09-12T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-002-23-bedtime_checkin-IN,EVT-002-23-bedtime_checkin,SYN-002,2026-09-12T21:11:00,inbound,patient,"Confirmed, thank you.",0.28
+MSG-EVT-002-24-wake_up-OUT,EVT-002-24-wake_up,SYN-002,2026-09-13T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-002-24-wake_up-IN,EVT-002-24-wake_up,SYN-002,2026-09-13T08:19:00,inbound,patient,"Confirmed, thank you.",0.24
+MSG-EVT-002-24-breakfast-OUT,EVT-002-24-breakfast,SYN-002,2026-09-13T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-002-24-breakfast-IN,EVT-002-24-breakfast,SYN-002,2026-09-13T08:45:00,inbound,patient,"Confirmed, thank you.",0.26
+MSG-EVT-002-24-morning_medication-OUT,EVT-002-24-morning_medication,SYN-002,2026-09-13T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-002-24-morning_medication-IN,EVT-002-24-morning_medication,SYN-002,2026-09-13T09:14:00,inbound,patient,"Confirmed, thank you.",0.24
+MSG-EVT-002-24-lunch_checkin-OUT,EVT-002-24-lunch_checkin,SYN-002,2026-09-13T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-002-24-lunch_checkin-IN,EVT-002-24-lunch_checkin,SYN-002,2026-09-13T12:51:00,inbound,patient,"Confirmed, thank you.",0.24
+MSG-EVT-002-24-evening_medication-OUT,EVT-002-24-evening_medication,SYN-002,2026-09-13T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-002-24-evening_medication-IN,EVT-002-24-evening_medication,SYN-002,2026-09-13T18:30:00,inbound,patient,"Confirmed, thank you.",0.21
+MSG-EVT-002-24-bedtime_checkin-OUT,EVT-002-24-bedtime_checkin,SYN-002,2026-09-13T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-002-24-bedtime_checkin-IN,EVT-002-24-bedtime_checkin,SYN-002,2026-09-13T21:21:00,inbound,patient,"Confirmed, thank you.",0.2
+MSG-EVT-002-25-wake_up-OUT,EVT-002-25-wake_up,SYN-002,2026-09-14T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-002-25-wake_up-IN,EVT-002-25-wake_up,SYN-002,2026-09-14T08:16:00,inbound,patient,"Confirmed, thank you.",0.19
+MSG-EVT-002-25-breakfast-OUT,EVT-002-25-breakfast,SYN-002,2026-09-14T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-002-25-breakfast-IN,EVT-002-25-breakfast,SYN-002,2026-09-14T08:50:00,inbound,patient,"Confirmed, thank you.",0.22
+MSG-EVT-002-25-morning_medication-OUT,EVT-002-25-morning_medication,SYN-002,2026-09-14T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-002-25-morning_medication-IN,EVT-002-25-morning_medication,SYN-002,2026-09-14T09:19:00,inbound,patient,"Confirmed, thank you.",0.21
+MSG-EVT-002-25-lunch_checkin-OUT,EVT-002-25-lunch_checkin,SYN-002,2026-09-14T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-002-25-lunch_checkin-IN,EVT-002-25-lunch_checkin,SYN-002,2026-09-14T12:46:00,inbound,patient,"Confirmed, thank you.",0.25
+MSG-EVT-002-25-evening_medication-OUT,EVT-002-25-evening_medication,SYN-002,2026-09-14T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-002-25-evening_medication-IN,EVT-002-25-evening_medication,SYN-002,2026-09-14T18:10:00,inbound,patient,"Confirmed, thank you.",0.24
+MSG-EVT-002-25-bedtime_checkin-OUT,EVT-002-25-bedtime_checkin,SYN-002,2026-09-14T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-002-25-bedtime_checkin-IN,EVT-002-25-bedtime_checkin,SYN-002,2026-09-14T21:20:00,inbound,patient,"Confirmed, thank you.",0.23
+MSG-EVT-002-26-wake_up-OUT,EVT-002-26-wake_up,SYN-002,2026-09-15T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-002-26-wake_up-IN,EVT-002-26-wake_up,SYN-002,2026-09-15T08:12:00,inbound,patient,"Confirmed, thank you.",0.18
+MSG-EVT-002-26-breakfast-OUT,EVT-002-26-breakfast,SYN-002,2026-09-15T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-002-26-breakfast-IN,EVT-002-26-breakfast,SYN-002,2026-09-15T08:53:00,inbound,patient,"Confirmed, thank you.",0.23
+MSG-EVT-002-26-morning_medication-OUT,EVT-002-26-morning_medication,SYN-002,2026-09-15T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-002-26-morning_medication-IN,EVT-002-26-morning_medication,SYN-002,2026-09-15T09:15:00,inbound,patient,"Confirmed, thank you.",0.32
+MSG-EVT-002-26-lunch_checkin-OUT,EVT-002-26-lunch_checkin,SYN-002,2026-09-15T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-002-26-lunch_checkin-IN,EVT-002-26-lunch_checkin,SYN-002,2026-09-15T12:59:00,inbound,patient,"Confirmed, thank you.",0.25
+MSG-EVT-002-26-evening_medication-OUT,EVT-002-26-evening_medication,SYN-002,2026-09-15T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-002-26-evening_medication-IN,EVT-002-26-evening_medication,SYN-002,2026-09-15T18:21:00,inbound,patient,"Confirmed, thank you.",0.29
+MSG-EVT-002-26-bedtime_checkin-OUT,EVT-002-26-bedtime_checkin,SYN-002,2026-09-15T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-002-26-bedtime_checkin-IN,EVT-002-26-bedtime_checkin,SYN-002,2026-09-15T21:12:00,inbound,patient,"Confirmed, thank you.",0.23
+MSG-EVT-002-27-wake_up-OUT,EVT-002-27-wake_up,SYN-002,2026-09-16T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-002-27-wake_up-IN,EVT-002-27-wake_up,SYN-002,2026-09-16T08:17:00,inbound,patient,"Confirmed, thank you.",0.21
+MSG-EVT-002-27-breakfast-OUT,EVT-002-27-breakfast,SYN-002,2026-09-16T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-002-27-breakfast-IN,EVT-002-27-breakfast,SYN-002,2026-09-16T08:47:00,inbound,patient,"Confirmed, thank you.",0.21
+MSG-EVT-002-27-morning_medication-OUT,EVT-002-27-morning_medication,SYN-002,2026-09-16T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-002-27-morning_medication-IN,EVT-002-27-morning_medication,SYN-002,2026-09-16T09:10:00,inbound,patient,"Confirmed, thank you.",0.27
+MSG-EVT-002-27-lunch_checkin-OUT,EVT-002-27-lunch_checkin,SYN-002,2026-09-16T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-002-27-lunch_checkin-IN,EVT-002-27-lunch_checkin,SYN-002,2026-09-16T12:54:00,inbound,patient,"Confirmed, thank you.",0.22
+MSG-EVT-002-27-evening_medication-OUT,EVT-002-27-evening_medication,SYN-002,2026-09-16T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-002-27-evening_medication-IN,EVT-002-27-evening_medication,SYN-002,2026-09-16T18:25:00,inbound,patient,"Confirmed, thank you.",0.3
+MSG-EVT-002-27-bedtime_checkin-OUT,EVT-002-27-bedtime_checkin,SYN-002,2026-09-16T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-002-27-bedtime_checkin-IN,EVT-002-27-bedtime_checkin,SYN-002,2026-09-16T21:11:00,inbound,patient,"Confirmed, thank you.",0.27
+MSG-EVT-002-28-wake_up-OUT,EVT-002-28-wake_up,SYN-002,2026-09-17T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-002-28-wake_up-IN,EVT-002-28-wake_up,SYN-002,2026-09-17T08:20:00,inbound,patient,"Confirmed, thank you.",0.31
+MSG-EVT-002-28-breakfast-OUT,EVT-002-28-breakfast,SYN-002,2026-09-17T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-002-28-breakfast-IN,EVT-002-28-breakfast,SYN-002,2026-09-17T08:43:00,inbound,patient,"Confirmed, thank you.",0.27
+MSG-EVT-002-28-morning_medication-OUT,EVT-002-28-morning_medication,SYN-002,2026-09-17T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-002-28-morning_medication-IN,EVT-002-28-morning_medication,SYN-002,2026-09-17T12:10:00,inbound,patient,"Oh, I forgot. I will take it now.",0.18
+MSG-EVT-002-28-lunch_checkin-OUT,EVT-002-28-lunch_checkin,SYN-002,2026-09-17T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-002-28-lunch_checkin-IN,EVT-002-28-lunch_checkin,SYN-002,2026-09-17T12:45:00,inbound,patient,"Confirmed, thank you.",0.25
+MSG-EVT-002-28-evening_medication-OUT,EVT-002-28-evening_medication,SYN-002,2026-09-17T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-002-28-evening_medication-IN,EVT-002-28-evening_medication,SYN-002,2026-09-17T18:20:00,inbound,patient,"Confirmed, thank you.",0.25
+MSG-EVT-002-28-bedtime_checkin-OUT,EVT-002-28-bedtime_checkin,SYN-002,2026-09-17T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-002-28-bedtime_checkin-IN,EVT-002-28-bedtime_checkin,SYN-002,2026-09-17T21:25:00,inbound,patient,"Confirmed, thank you.",0.26
+MSG-EVT-002-29-wake_up-OUT,EVT-002-29-wake_up,SYN-002,2026-09-18T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-002-29-wake_up-IN,EVT-002-29-wake_up,SYN-002,2026-09-18T08:27:00,inbound,patient,"Confirmed, thank you.",0.34
+MSG-EVT-002-29-breakfast-OUT,EVT-002-29-breakfast,SYN-002,2026-09-18T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-002-29-breakfast-IN,EVT-002-29-breakfast,SYN-002,2026-09-18T08:53:00,inbound,patient,"Confirmed, thank you.",0.27
+MSG-EVT-002-29-morning_medication-OUT,EVT-002-29-morning_medication,SYN-002,2026-09-18T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-002-29-morning_medication-IN,EVT-002-29-morning_medication,SYN-002,2026-09-18T09:18:00,inbound,patient,"Confirmed, thank you.",0.31
+MSG-EVT-002-29-lunch_checkin-OUT,EVT-002-29-lunch_checkin,SYN-002,2026-09-18T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-002-29-lunch_checkin-IN,EVT-002-29-lunch_checkin,SYN-002,2026-09-18T13:08:00,inbound,patient,Who is coming to lunch? I thought I was at home.,0.84
+MSG-EVT-002-29-evening_medication-OUT,EVT-002-29-evening_medication,SYN-002,2026-09-18T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-002-29-evening_medication-IN,EVT-002-29-evening_medication,SYN-002,2026-09-18T18:23:00,inbound,patient,"Confirmed, thank you.",0.28
+MSG-EVT-002-29-bedtime_checkin-OUT,EVT-002-29-bedtime_checkin,SYN-002,2026-09-18T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-002-29-bedtime_checkin-IN,EVT-002-29-bedtime_checkin,SYN-002,2026-09-18T21:21:00,inbound,patient,"Confirmed, thank you.",0.25
+MSG-EVT-002-30-wake_up-OUT,EVT-002-30-wake_up,SYN-002,2026-09-19T08:00:00,outbound,companion,Good morning. How are you feeling today?,
+MSG-EVT-002-30-wake_up-IN,EVT-002-30-wake_up,SYN-002,2026-09-19T08:13:00,inbound,patient,"Confirmed, thank you.",0.35
+MSG-EVT-002-30-breakfast-OUT,EVT-002-30-breakfast,SYN-002,2026-09-19T08:30:00,outbound,companion,Breakfast is ready. Would you like tea or coffee?,
+MSG-EVT-002-30-breakfast-IN,EVT-002-30-breakfast,SYN-002,2026-09-19T08:49:00,inbound,patient,"Confirmed, thank you.",0.27
+MSG-EVT-002-30-morning_medication-OUT,EVT-002-30-morning_medication,SYN-002,2026-09-19T09:00:00,outbound,companion,It is time for your morning medication. Please reply when it is taken.,
+MSG-EVT-002-30-morning_medication-IN,EVT-002-30-morning_medication,SYN-002,2026-09-19T11:45:00,inbound,patient,"Oh, I forgot. I will take it now.",0.18
+MSG-EVT-002-30-lunch_checkin-OUT,EVT-002-30-lunch_checkin,SYN-002,2026-09-19T12:30:00,outbound,companion,How was lunch today?,
+MSG-EVT-002-30-lunch_checkin-IN,EVT-002-30-lunch_checkin,SYN-002,2026-09-19T12:41:00,inbound,patient,"Confirmed, thank you.",0.31
+MSG-EVT-002-30-evening_medication-OUT,EVT-002-30-evening_medication,SYN-002,2026-09-19T18:00:00,outbound,companion,It is time for your evening medication. Please reply when it is taken.,
+MSG-EVT-002-30-evening_medication-IN,EVT-002-30-evening_medication,SYN-002,2026-09-19T19:20:00,inbound,patient,What medicine is this for? I do not remember this.,0.73
+MSG-EVT-002-30-bedtime_checkin-OUT,EVT-002-30-bedtime_checkin,SYN-002,2026-09-19T21:00:00,outbound,companion,Good evening. Are you ready to wind down for bed?,
+MSG-EVT-002-30-bedtime_checkin-IN,EVT-002-30-bedtime_checkin,SYN-002,2026-09-19T21:18:00,inbound,patient,"Confirmed, thank you.",0.36
