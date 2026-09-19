@@ -1,0 +1,3 @@
+patient_id,display_name,age_band,profile,living_setting,caregiver_relationship,caregiver_name,timezone
+SYN-001,Maya Chen,75-79,nominal,assisted_living,daughter,Jordan Chen,America/New_York
+SYN-002,Robert Ellis,80-84,divergent,assisted_living,son,Devon Ellis,America/New_York
