@@ -1,0 +1,36 @@
+{
+  "patient_name": "Eleanor Vance",
+  "age": 78,
+  "condition": "Mild Cognitive Impairment (Early-stage Dementia)",
+  "family_members": [
+    {
+      "name": "Sarah",
+      "relationship": "Daughter",
+      "detail": "Visits every Tuesday and Saturday at 5:00 PM with groceries. Has brown hair and works as a teacher."
+    },
+    {
+      "name": "David",
+      "relationship": "Husband (Deceased)",
+      "detail": "Passed away peacefully 4 years ago. Loved jazz music and gardening."
+    }
+  ],
+  "daily_routines": [
+    {
+      "time": "08:30 AM",
+      "task": "Morning blood pressure medication (blue pill on kitchen counter) with a glass of water."
+    },
+    {
+      "time": "01:00 PM",
+      "task": "Afternoon walk around the garden or porch."
+    },
+    {
+      "time": "06:00 PM",
+      "task": "Evening dinner and calcium supplement."
+    }
+  ],
+  "grounding_memories": [
+    "Favorite tea: Earl Grey with a drop of honey.",
+    "Favorite cat: Oliver (orange tabby, sleeps on the armchair).",
+    "Former career: High school English teacher for 32 years."
+  ]
+}
