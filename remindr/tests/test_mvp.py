@@ -140,6 +140,21 @@ def test_who_is_is_a_deterministic_memory_lookup(repo):
     assert asyncio.run(assistant.respond("chat-1", "Tell me about Susan")) == "Susan is your daughter."
 
 
+@pytest.mark.parametrize("question", ["Who am I?", "What's my name?", "What’s my nam"])
+def test_self_name_question_reads_patient_context(repo, question):
+    repo.create_initial_context("chat-1", "caregiver-1", "Maggie", "Susan", "daughter")
+    assistant = CareAssistant(repo, None, "America/New_York")
+    assert asyncio.run(assistant.respond("chat-1", question)) == "Your name is Maggie."
+
+
+def test_self_profile_question_reads_patient_context(repo):
+    repo.create_initial_context("chat-1", "caregiver-1", "Maggie", "Susan", "daughter", patient_notes="Use short, simple replies.")
+    assistant = CareAssistant(repo, None, "America/New_York")
+    assert asyncio.run(assistant.respond("chat-1", "What do you know about me")) == (
+        "Your name is Maggie. Your caregiver is Susan. Use short, simple replies."
+    )
+
+
 def test_person_statement_is_saved_without_relying_on_model_tool_selection(repo):
     assistant = CareAssistant(repo, None, "America/New_York")
     assert asyncio.run(assistant.respond("chat-1", "Susan is my daughter.")) == "I'll remember that Susan is your daughter."
@@ -275,6 +290,18 @@ def test_signup_intake_seeds_structured_memory(repo):
         assert repo.get_reminders("patient-1", datetime.now(timezone.utc) - timedelta(days=1), datetime.now(timezone.utc) + timedelta(days=2))
     assistant = CareAssistant(repo, None, "America/New_York")
     assert asyncio.run(assistant.respond("patient-1", "Who is my doctor?")) == "Your doctor is Sarah."
+
+
+def test_example_intake_is_loaded_once_at_startup(repo):
+    settings = Settings(mongodb_uri="mongodb://unused", linq_webhook_secret=None, openai_api_key="", linq_api_token="")
+    app = create_app(settings, repo)
+    with TestClient(app):
+        patient_id = settings.default_patient_chat_id
+        assert {context["role"] for context in repo.get_context_files(patient_id)} == {"patient", "caregiver"}
+        assert repo.get_person_by_relationship(patient_id, "doctor")["name"] == "Sarah"
+    before = repo.db.reminders.count_documents({"recipient_id": settings.default_patient_chat_id})
+    with TestClient(app):
+        assert repo.db.reminders.count_documents({"recipient_id": settings.default_patient_chat_id}) == before
 
 
 def test_patient_cannot_change_authoritative_person_fact(repo):

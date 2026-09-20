@@ -51,7 +51,7 @@ class MessageEvaluator:
             intent = "SCHEDULE_QUERY"
             score = 0.20
             reply = "I can help check your schedule."
-        elif any(token in normalized for token in ("who am i", "what is my name", "whats my name", "who is me")):
+        elif any(token in normalized for token in ("who am i", "what is my name", "whats my name", "what’s my name", "what’s my nam", "who is me")):
             intent = "IDENTITY_QUERY"
             score = 0.65
             reply = f"You're {patient_name}. You're safe, and I'm here with you."

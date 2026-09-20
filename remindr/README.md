@@ -35,6 +35,8 @@ pip install -r requirements.txt
 uvicorn app.main:app --reload
 ```
 
+On its first startup, the app loads `examples/intake.example.json` into MongoDB as the demo patient profile. It only does this when that patient has no existing context, so caregiver updates are never overwritten. Set `AUTO_SEED_EXAMPLE_INTAKE=false` to disable this behavior.
+
 Set `OPENAI_API_KEY` before asking natural-language questions. Set `LINQ_API_BASE_URL` to exactly `https://api.linqapp.com/api/partner/v3` (do not append `/chats`). Without a Linq token the adapter uses a visible dry run and will not deliver a real message. Create a Linq `message.received` webhook subscription pointing at `https://YOUR_HOST/webhooks/linq?version=2026-02-03`; set its Standard Webhooks signing secret as `LINQ_WEBHOOK_SECRET`.
 
 ## Caregiver examples

@@ -68,6 +68,36 @@ def _extract_relationship_lookup(text: str) -> str | None:
     return None
 
 
+def _is_self_name_query(text: str) -> bool:
+    """Recognize direct identity questions without depending on model tool selection."""
+    return bool(re.fullmatch(
+        r"\s*(?:who\s+am\s+i|what(?:'s|’s|\s+is)\s+(?:my\s+)?nam(?:e)?)\s*[?!.]*\s*",
+        text,
+        flags=re.IGNORECASE,
+    ))
+
+
+def _is_self_profile_query(text: str) -> bool:
+    return bool(re.fullmatch(
+        r"\s*(?:what\s+do\s+you\s+know\s+about|tell\s+me\s+about|do\s+you\s+remember)\s+me\s*[?!.]*\s*",
+        text,
+        flags=re.IGNORECASE,
+    ))
+
+
+def _self_profile_response(context: dict | None) -> str:
+    facts = (context or {}).get("facts") or {}
+    patient_name = facts.get("patient_name")
+    if not patient_name:
+        return "I don't have information about you saved yet."
+    details = [f"Your name is {patient_name}."]
+    if facts.get("primary_caregiver"):
+        details.append(f"Your caregiver is {facts['primary_caregiver']}.")
+    if (context or {}).get("notes"):
+        details.append(str(context["notes"]).strip())
+    return " ".join(details)
+
+
 def _owner_pattern(role: str) -> str:
     if role == "caregiver":
         return r"(?:my|our|the\s+patient's|patients?|her|his|their|[A-Za-z][A-Za-z .'-]{0,117}(?:'s|’s))"
@@ -124,6 +154,13 @@ class CareAssistant:
         if text.strip().casefold() == "done":
             reminder = self.repo.acknowledge_latest(recipient_id)
             return "Thank you — I marked it done." if reminder else "I don't see a reminder waiting for confirmation."
+        if _is_self_name_query(text):
+            patient_name = (context or {}).get("facts", {}).get("patient_name")
+            if patient_name:
+                return f"Your name is {patient_name}."
+            return "I don't have your name saved yet."
+        if _is_self_profile_query(text):
+            return _self_profile_response(context)
         # Friendly patient-facing reminder shorthand. If no AM/PM is supplied,
         # interpret a bare afternoon/evening clock time as PM; the full LLM
         # tool path remains available for more complex recurrence/date requests.

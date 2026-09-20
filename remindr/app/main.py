@@ -4,6 +4,7 @@ import hmac
 import json
 import time
 from contextlib import asynccontextmanager
+from pathlib import Path
 
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from fastapi import Depends, FastAPI, Header, HTTPException, Request, status
@@ -15,6 +16,33 @@ from .linq import LinqClient
 from .models import CaregiverLinkInput, CreateReminder, EventInput, InboundMessage, OutboundMessage, PersonInput, SignupContextInput, SignupIntakeInput
 from .repository import Repository
 from .scheduler import ReminderScheduler
+
+
+EXAMPLE_INTAKE_PATH = Path(__file__).resolve().parents[1] / "examples" / "intake.example.json"
+
+
+def seed_example_intake(repo: Repository, settings: Settings) -> None:
+    """Seed the bundled demo profile once, without replacing saved caregiver data."""
+    if not settings.auto_seed_example_intake or not EXAMPLE_INTAKE_PATH.is_file():
+        return
+    payload = SignupIntakeInput.model_validate(json.loads(EXAMPLE_INTAKE_PATH.read_text()))
+    if repo.get_context_files(payload.patient_chat_id):
+        return
+    repo.create_intake(
+        payload.patient_chat_id,
+        payload.caregiver_chat_id,
+        payload.patient_name,
+        payload.caregiver_name,
+        payload.caregiver_relationship,
+        payload.patient_notes,
+        payload.caregiver_notes,
+        [item.model_dump() for item in payload.doctors],
+        [item.model_dump() for item in payload.important_people],
+        [item.model_dump() for item in payload.daily_routines],
+        [item.model_dump() for item in payload.upcoming_events],
+        payload.safety_notes,
+        payload.communication_preferences,
+    )
 
 
 def verify_signature(body: bytes, webhook_id: str | None, timestamp: str | None, signature: str | None, secret: str | None) -> None:
@@ -65,6 +93,7 @@ def create_app(settings: Settings | None = None, repo: Repository | None = None)
     @asynccontextmanager
     async def lifespan(app: FastAPI):
         repo.ensure_indexes()
+        seed_example_intake(repo, settings)
         jobber = AsyncIOScheduler(timezone="UTC")
         jobber.add_job(scheduler.deliver_due, "interval", seconds=settings.scheduler_poll_seconds, id="deliver-reminders", max_instances=1, coalesce=True)
         jobber.start()

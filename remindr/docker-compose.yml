@@ -1,8 +1,9 @@
 services:
   mongodb:
-    image: mongo:8
+    # MongoDB 8 refuses to start on Docker Desktop's current Linux 6.19 kernel.
+    image: mongo:7.0
     ports:
-      - "27017:27017"
+      - "27018:27017"
     volumes:
       - mongodb_data:/data/db
 volumes:

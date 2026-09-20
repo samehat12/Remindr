@@ -15,6 +15,7 @@ class Settings(BaseSettings):
     linq_send_max_attempts: int = 3
     default_timezone: str = "America/New_York"
     scheduler_poll_seconds: int = 30
+    auto_seed_example_intake: bool = True
     default_patient_chat_id: str | None = "c742f2a9-0e8e-4ed9-a6cb-bcc39fdc1001"
     default_caregiver_chat_id: str | None = "576d31b7-7599-42b0-9868-66c7124efad0"
 
