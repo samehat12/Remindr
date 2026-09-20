@@ -1,0 +1,1 @@
+"""Care companion MVP."""

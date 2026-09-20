@@ -1,0 +1,40 @@
+{
+  "patient_chat_id": "c742f2a9-0e8e-4ed9-a6cb-bcc39fdc1001",
+  "caregiver_chat_id": "576d31b7-7599-42b0-9868-66c7124efad0",
+  "patient_name": "Maggie",
+  "caregiver_name": "Susan",
+  "caregiver_relationship": "daughter",
+  "patient_notes": "Use short, simple replies.",
+  "caregiver_notes": "Caregiver-provided facts are the source of truth for patient memory.",
+  "doctors": [
+    {
+      "name": "Sarah",
+      "role": "doctor"
+    },
+    {
+      "name": "Dr. Chen",
+      "role": "cardiologist"
+    }
+  ],
+  "important_people": [
+    {
+      "name": "Susan",
+      "relationship": "daughter"
+    }
+  ],
+  "daily_routines": [
+    {
+      "task": "morning medication",
+      "time": "08:00",
+      "recurrence": "daily"
+    }
+  ],
+  "upcoming_events": [],
+  "safety_notes": [
+    "Do not provide medical advice.",
+    "Ask caregiver for medication changes."
+  ],
+  "communication_preferences": [
+    "Use short, simple replies."
+  ]
+}
