@@ -167,6 +167,14 @@ class Repository:
             "created_at": now,
             "updated_at": now,
         }
+        # Intake synchronization must not erase sensitive updates supplied later
+        # by a caregiver (for example, a pet's passing).
+        for doc in (patient_doc, caregiver_doc):
+            existing = self.get_context_for_role(patient_id, doc["role"]) or {}
+            existing_facts = existing.get("facts") or {}
+            for key in ("caregiver_updates", "dietary_restrictions", "dietary_guidance"):
+                if existing_facts.get(key):
+                    doc["facts"][key] = existing_facts[key]
         for doc in (patient_doc, caregiver_doc):
             self.db.context_files.update_one(
                 {"patient_id": patient_id, "role": doc["role"]},
@@ -174,6 +182,45 @@ class Repository:
                 upsert=True,
             )
         return {"patient_id": patient_id, "contexts": self.get_context_files(patient_id)}
+
+    def add_caregiver_update(self, patient_id: str, subject: str, update: str) -> None:
+        """Save sensitive, caregiver-authoritative context for gentle patient responses."""
+        patient_id = self._normalize_chat_id(patient_id)
+        item = {"subject": subject.strip().casefold(), "update": update.strip(), "created_at": utcnow()}
+        for role in ("patient", "caregiver"):
+            self.db.context_files.update_one(
+                {"patient_id": patient_id, "role": role},
+                {"$push": {"facts.caregiver_updates": item}, "$set": {"updated_at": utcnow()}},
+            )
+
+    def add_dietary_restriction(self, patient_id: str, restriction: str) -> None:
+        patient_id = self._normalize_chat_id(patient_id)
+        item = {"restriction": restriction.strip(), "created_at": utcnow()}
+        for role in ("patient", "caregiver"):
+            self.db.context_files.update_one(
+                {"patient_id": patient_id, "role": role},
+                {"$addToSet": {"facts.dietary_restrictions": item}, "$set": {"updated_at": utcnow()}},
+            )
+
+    def add_dietary_guidance(self, patient_id: str, guidance: str) -> None:
+        patient_id = self._normalize_chat_id(patient_id)
+        item = {"guidance": guidance.strip(), "created_at": utcnow()}
+        for role in ("patient", "caregiver"):
+            self.db.context_files.update_one(
+                {"patient_id": patient_id, "role": role},
+                {"$addToSet": {"facts.dietary_guidance": item}, "$set": {"updated_at": utcnow()}},
+            )
+
+    def add_caregiver_note(self, patient_id: str, text: str) -> None:
+        """Retain unverified caregiver commentary without exposing it as patient fact."""
+        patient_id = self._normalize_chat_id(patient_id)
+        self.db.caregiver_notes.insert_one({
+            "patient_id": patient_id,
+            "text": text.strip(),
+            "source": "caregiver_report",
+            "verification_required": True,
+            "created_at": utcnow(),
+        })
 
     def create_intake(
         self,
@@ -190,11 +237,16 @@ class Repository:
         upcoming_events: list[dict] | None = None,
         safety_notes: list[str] | None = None,
         communication_preferences: list[str] | None = None,
+        grounding_memories: dict | None = None,
+        intake_source_digest: str | None = None,
     ) -> dict:
         extra_facts = {
             "safety_notes": safety_notes or [],
             "communication_preferences": communication_preferences or [],
+            "grounding_memories": grounding_memories or {},
         }
+        if intake_source_digest:
+            extra_facts["intake_source_digest"] = intake_source_digest
         result = self.create_initial_context(
             patient_chat_id,
             caregiver_chat_id,

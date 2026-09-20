@@ -1,5 +1,6 @@
 import base64
 import hashlib
+import hashlib
 import hmac
 import json
 import time
@@ -21,12 +22,15 @@ from .scheduler import ReminderScheduler
 EXAMPLE_INTAKE_PATH = Path(__file__).resolve().parents[1] / "examples" / "intake.example.json"
 
 
-def seed_example_intake(repo: Repository, settings: Settings) -> None:
-    """Seed the bundled demo profile once, without replacing saved caregiver data."""
+def sync_example_intake(repo: Repository, settings: Settings) -> None:
+    """Import the bundled intake whenever its contents change."""
     if not settings.auto_seed_example_intake or not EXAMPLE_INTAKE_PATH.is_file():
         return
-    payload = SignupIntakeInput.model_validate(json.loads(EXAMPLE_INTAKE_PATH.read_text()))
-    if repo.get_context_files(payload.patient_chat_id):
+    raw_intake = EXAMPLE_INTAKE_PATH.read_bytes()
+    payload = SignupIntakeInput.model_validate(json.loads(raw_intake))
+    digest = hashlib.sha256(raw_intake).hexdigest()
+    current = repo.get_context_for_role(payload.patient_chat_id, "patient") or {}
+    if (current.get("facts") or {}).get("intake_source_digest") == digest:
         return
     repo.create_intake(
         payload.patient_chat_id,
@@ -42,6 +46,8 @@ def seed_example_intake(repo: Repository, settings: Settings) -> None:
         [item.model_dump() for item in payload.upcoming_events],
         payload.safety_notes,
         payload.communication_preferences,
+        payload.grounding_memories.model_dump(),
+        digest,
     )
 
 
@@ -93,7 +99,7 @@ def create_app(settings: Settings | None = None, repo: Repository | None = None)
     @asynccontextmanager
     async def lifespan(app: FastAPI):
         repo.ensure_indexes()
-        seed_example_intake(repo, settings)
+        sync_example_intake(repo, settings)
         jobber = AsyncIOScheduler(timezone="UTC")
         jobber.add_job(scheduler.deliver_due, "interval", seconds=settings.scheduler_poll_seconds, id="deliver-reminders", max_instances=1, coalesce=True)
         jobber.start()
@@ -137,6 +143,8 @@ def create_app(settings: Settings | None = None, repo: Repository | None = None)
                     "text": message.text,
                 },
             )
+            if session["role"] == "caregiver":
+                repo.add_caregiver_note(session["patient_id"], message.text)
             if session["role"] == "patient":
                 evaluation = evaluator.evaluate(message.text, repo.patient_profile(session["patient_id"]))
                 repo.add_message_evaluation(session["patient_id"], message.sender_id, message.text, evaluation.model_dump())

@@ -155,6 +155,95 @@ def test_self_profile_question_reads_patient_context(repo):
     )
 
 
+def test_pet_location_question_uses_gentle_grounding_response(repo):
+    repo.create_intake(
+        "chat-1", "caregiver-1", "Maggie", "Susan", "daughter",
+        grounding_memories={"pets": [{"name": "Milo", "type": "dog"}]},
+    )
+    assistant = CareAssistant(repo, None, "America/New_York")
+    assert asyncio.run(assistant.respond("chat-1", "Where is Milo now?")) == (
+        "Milo was very loved. I know you shared many special moments together. "
+        "Would you like to tell me a favorite memory of Milo?"
+    )
+
+
+def test_grounding_pet_type_is_found_on_first_question(repo):
+    repo.create_intake(
+        "chat-1", "caregiver-1", "Maggie", "Susan", "daughter",
+        grounding_memories={"pets": [{"name": "Whiskers", "type": "cat", "details": "Family cat during childhood."}]},
+    )
+    assistant = CareAssistant(repo, None, "America/New_York")
+    assert asyncio.run(assistant.respond("chat-1", "Tell me about my cat")) == "Whiskers was your family cat during childhood."
+
+
+def test_caregiver_loss_update_is_saved_for_patient_access(repo):
+    repo.create_initial_context("patient-1", "caregiver-1", "Maggie", "Sameha", "daughter")
+    assistant = CareAssistant(repo, None, "America/New_York")
+    reply = asyncio.run(assistant.respond(
+        "caregiver-1", "Maggie's parrot passed away recently.",
+        memory_id="patient-1", can_write_personal_facts=True,
+    ))
+    assert "remember" in reply
+    assert asyncio.run(assistant.respond(
+        "patient-1", "Where is my parrot?", memory_id="patient-1", can_write_personal_facts=False,
+    )) == "I'm so sorry. Your parrot passed away recently. They were very loved. Would you like to share a favorite memory?"
+
+
+def test_caregiver_dietary_restriction_blocks_food_recommendations(repo):
+    repo.create_initial_context("patient-1", "caregiver-1", "Maggie", "Sameha", "daughter")
+    assistant = CareAssistant(repo, None, "America/New_York")
+    assert asyncio.run(assistant.respond(
+        "caregiver-1", "Maggie cannot eat greasy or oily foods.",
+        memory_id="patient-1", can_write_personal_facts=True,
+    )) == "Understood. I'll remember to avoid suggesting greasy or oily foods."
+    assert asyncio.run(assistant.respond(
+        "caregiver-1", "Maggie should have more fiber.",
+        memory_id="patient-1", can_write_personal_facts=True,
+    )) == "Understood. I'll remember Maggie should have more fiber."
+    assert asyncio.run(assistant.respond(
+        "patient-1", "What should I have today, McDonalds or Burger King?",
+        memory_id="patient-1", can_write_personal_facts=False,
+    )) == (
+        "I know choosing what to eat can feel frustrating. Sameha asked me to help you avoid greasy or oily foods and include more fiber. "
+        "Let's check with Sameha or your clinician about what would feel good today."
+    )
+
+
+def test_caregiver_avoid_instruction_handles_typo_and_blocks_any_food_choice(repo):
+    repo.create_initial_context("patient-1", "caregiver-1", "Maggie", "Sameha", "daughter")
+    assistant = CareAssistant(repo, None, "America/New_York")
+    assert asyncio.run(assistant.respond(
+        "caregiver-1", "Maggie shoukd avoid all nuts.",
+        memory_id="patient-1", can_write_personal_facts=True,
+    )) == "Understood. I'll remember to avoid suggesting nuts."
+    assert "avoid nuts" in asyncio.run(assistant.respond(
+        "patient-1", "Can I have a PB and J?", memory_id="patient-1", can_write_personal_facts=False,
+    ))
+
+
+def test_caregiver_shellfish_restriction_handles_cant_and_broader_food_questions(repo):
+    repo.create_initial_context("patient-1", "caregiver-1", "Maggie", "Sameha", "daughter")
+    assistant = CareAssistant(repo, None, "America/New_York")
+    assert asyncio.run(assistant.respond(
+        "caregiver-1", "Shee cant have shellfish.",
+        memory_id="patient-1", can_write_personal_facts=True,
+    )) == "Understood. I'll remember to avoid suggesting shellfish."
+    response = asyncio.run(assistant.respond(
+        "patient-1", "Am I able to eat shrimp?", memory_id="patient-1", can_write_personal_facts=False,
+    ))
+    assert "avoid shellfish" in response
+
+
+def test_unverified_caregiver_commentary_is_not_patient_context(repo):
+    repo.create_initial_context("patient-1", "caregiver-1", "Maggie", "Sameha", "daughter")
+    repo.add_caregiver_note("patient-1", "I think Maggie may not like tomatoes.")
+    patient_context = repo.get_context_for_role("patient-1", "patient")
+    assert "caregiver_notes" not in patient_context["facts"]
+    saved = repo.db.caregiver_notes.find_one({"patient_id": "patient-1"})
+    assert saved["source"] == "caregiver_report"
+    assert saved["verification_required"] is True
+
+
 def test_person_statement_is_saved_without_relying_on_model_tool_selection(repo):
     assistant = CareAssistant(repo, None, "America/New_York")
     assert asyncio.run(assistant.respond("chat-1", "Susan is my daughter.")) == "I'll remember that Susan is your daughter."
@@ -299,6 +388,7 @@ def test_example_intake_is_loaded_once_at_startup(repo):
         patient_id = settings.default_patient_chat_id
         assert {context["role"] for context in repo.get_context_files(patient_id)} == {"patient", "caregiver"}
         assert repo.get_person_by_relationship(patient_id, "doctor")["name"] == "Sarah"
+        assert repo.get_context_for_role(patient_id, "patient")["facts"]["intake_source_digest"]
     before = repo.db.reminders.count_documents({"recipient_id": settings.default_patient_chat_id})
     with TestClient(app):
         assert repo.db.reminders.count_documents({"recipient_id": settings.default_patient_chat_id}) == before

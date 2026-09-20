@@ -15,11 +15,16 @@ When a caregiver states a patient fact in third person, such as "Maggie's doctor
 "her doctor is Sarah", or "Dr. Chen is the patient's doctor", save the named person as the
 patient's relationship, for example Dr. Chen -> doctor.
 For questions about people, events, or schedule, you MUST call the matching retrieval tool and state only
-the returned information. Never say you will remember something unless a save tool succeeded. Never state
-a personal fact unless a tool returned it. Never give medical advice, interpret symptoms, or change
-medication instructions. For medicine requests, suggest contacting a clinician or caregiver. Keep replies
-short and simple. Today's date and user time zone are provided. If necessary information is missing, ask
-one short question."""
+the returned information. The patient's role context may contain grounding memories: trusted, curated
+information about pets, favorite things, life history, comfort topics, and conversation preferences. Use
+these gently to support reminiscence or reduce distress; never quiz the patient about them. Never say you
+will remember something unless a save tool succeeded. Never state a personal fact unless it came from
+stored context or a tool result. Treat only explicit structured caregiver instructions and updates as
+patient-facing context; unverified caregiver reports are retained separately and must not be presented as
+facts. Never give medical advice, interpret symptoms, or change medication
+instructions. For medicine requests, suggest contacting a clinician or caregiver. Keep replies short and
+simple. Today's date and user time zone are provided. If necessary information is missing, ask one short
+question."""
 
 TOOLS = [
     {"type": "function", "name": "add_person", "description": "Save a person when the user explicitly gives a name and relationship, such as Susan is my daughter.", "strict": True, "parameters": {"type": "object", "properties": {"name": {"type": "string"}, "relationship": {"type": "string"}}, "required": ["name", "relationship"], "additionalProperties": False}},
@@ -98,6 +103,129 @@ def _self_profile_response(context: dict | None) -> str:
     return " ".join(details)
 
 
+def _grounding_pet_response(context: dict | None, text: str) -> str | None:
+    """Offer a gentle reminiscence prompt without inventing a pet's current status."""
+    facts = (context or {}).get("facts") or {}
+    grounding = facts.get("grounding_memories") or {}
+    normalized = text.casefold()
+    if not any(phrase in normalized for phrase in ("where is", "where's", "wheres")):
+        return None
+    for pet in grounding.get("pets") or []:
+        name = str(pet.get("name") or "").strip()
+        if name and re.search(rf"\b{re.escape(name.casefold())}\b", normalized):
+            return (
+                f"{name} was very loved. I know you shared many special moments together. "
+                f"Would you like to tell me a favorite memory of {name}?"
+            )
+    return None
+
+
+def _grounding_memory_response(context: dict | None, text: str) -> str | None:
+    """Resolve first-try questions about any pet saved in grounding memories."""
+    facts = (context or {}).get("facts") or {}
+    grounding = facts.get("grounding_memories") or {}
+    match = re.fullmatch(
+        r"\s*(?:tell\s+me\s+about\s+)?(?:my\s+)?(?P<subject>[A-Za-z][A-Za-z -]{0,80})\s*[?!.]*\s*",
+        text,
+        flags=re.IGNORECASE,
+    )
+    if not match:
+        return None
+    subject = match.group("subject").strip().casefold()
+    # Avoid intercepting ordinary sentences; this is a concise noun-phrase query.
+    if subject.startswith(("what ", "who ", "where ", "can ", "should ")):
+        return None
+    for pet in grounding.get("pets") or []:
+        name = str(pet.get("name") or "").strip()
+        pet_type = str(pet.get("type") or "").strip()
+        if subject not in {name.casefold(), pet_type.casefold(), f"my {pet_type.casefold()}"}:
+            continue
+        details = str(pet.get("details") or "").strip().rstrip(".")
+        if details:
+            details = details[:1].lower() + details[1:]
+            return f"{name} was your {details}."
+        return f"{name} was an important {pet_type} in your life."
+    return None
+
+
+def _extract_caregiver_loss_update(text: str, role: str) -> tuple[str, str] | None:
+    if role != "caregiver":
+        return None
+    match = re.search(
+        r"(?:my|(?:[A-Za-z][A-Za-z .'-]{0,117})(?:'s|’s)|the\s+patient(?:'s)?)\s+"
+        r"(?P<subject>[A-Za-z][A-Za-z -]{0,80}?)\s+"
+        r"(?P<update>passed\s+away(?:\s+recently)?|died(?:\s+recently)?)\b",
+        text,
+        flags=re.IGNORECASE,
+    )
+    if not match:
+        return None
+    return match.group("subject").strip(), match.group("update").strip()
+
+
+def _caregiver_update_response(context: dict | None, text: str) -> str | None:
+    facts = (context or {}).get("facts") or {}
+    normalized = text.casefold()
+    for item in facts.get("caregiver_updates") or []:
+        subject = str(item.get("subject") or "").strip()
+        update = str(item.get("update") or "").casefold()
+        if subject and re.search(rf"\b{re.escape(subject)}\b", normalized) and ("passed away" in update or "died" in update):
+            return (
+                f"I'm so sorry. Your {subject} passed away recently. "
+                "They were very loved. Would you like to share a favorite memory?"
+            )
+    return None
+
+
+def _extract_dietary_restriction(text: str, role: str) -> str | None:
+    if role != "caregiver":
+        return None
+    match = re.search(
+        r"\b(?:cannot|can't|cant|shouldn't|should not|must not|do not|don't)\s+(?:eat|have)\s+(?P<restriction>[^.!?]{2,180})",
+        text,
+        flags=re.IGNORECASE,
+    )
+    if match:
+        return match.group("restriction").strip()
+    # Explicit caregiver "avoid" instructions remain valid even when casual
+    # spelling mistakes occur before the word (for example, "shoukd avoid").
+    match = re.search(r"\bavoid\s+(?:all\s+)?(?P<restriction>[^.!?]{2,180})", text, flags=re.IGNORECASE)
+    return match.group("restriction").strip() if match else None
+
+
+def _extract_dietary_guidance(text: str, role: str) -> str | None:
+    if role != "caregiver":
+        return None
+    match = re.search(r"\bshould\s+(?:have|eat|include)\s+(?P<guidance>[^.!?]{2,180})", text, flags=re.IGNORECASE)
+    return match.group("guidance").strip() if match else None
+
+
+def _food_safety_response(context: dict | None, text: str) -> str | None:
+    facts = (context or {}).get("facts") or {}
+    restrictions = facts.get("dietary_restrictions") or []
+    guidance = facts.get("dietary_guidance") or []
+    if not restrictions and not guidance:
+        return None
+    normalized = text.casefold()
+    food_question = any(token in normalized for token in (
+        "what should i have", "what should i eat", "can i have", "can i eat", "am i able to eat",
+        "what about", "mcdonald", "burger king", "food", "meal", " eat ", " have ",
+    ))
+    if not food_question:
+        return None
+    details = []
+    if restrictions:
+        details.append(f"avoid {restrictions[-1].get('restriction')}")
+    if guidance:
+        details.append(f"include {guidance[-1].get('guidance')}")
+    instruction = " and ".join(details)
+    return (
+        "I know choosing what to eat can feel frustrating. "
+        f"Sameha asked me to help you {instruction}. "
+        "Let's check with Sameha or your clinician about what would feel good today."
+    )
+
+
 def _owner_pattern(role: str) -> str:
     if role == "caregiver":
         return r"(?:my|our|the\s+patient's|patients?|her|his|their|[A-Za-z][A-Za-z .'-]{0,117}(?:'s|’s))"
@@ -161,6 +289,31 @@ class CareAssistant:
             return "I don't have your name saved yet."
         if _is_self_profile_query(text):
             return _self_profile_response(context)
+        caregiver_loss = _extract_caregiver_loss_update(text, role)
+        if caregiver_loss and can_write_personal_facts:
+            subject, update = caregiver_loss
+            self.repo.add_caregiver_update(memory_id, subject, update)
+            return "I'm sorry. I'll remember this and respond gently if Maggie asks."
+        dietary_restriction = _extract_dietary_restriction(text, role)
+        if dietary_restriction and can_write_personal_facts:
+            self.repo.add_dietary_restriction(memory_id, dietary_restriction)
+            return f"Understood. I'll remember to avoid suggesting {dietary_restriction}."
+        dietary_guidance = _extract_dietary_guidance(text, role)
+        if dietary_guidance and can_write_personal_facts:
+            self.repo.add_dietary_guidance(memory_id, dietary_guidance)
+            return f"Understood. I'll remember Maggie should have {dietary_guidance}."
+        food_safety = _food_safety_response(context, text)
+        if food_safety:
+            return food_safety
+        caregiver_update = _caregiver_update_response(context, text)
+        if caregiver_update:
+            return caregiver_update
+        grounding_response = _grounding_memory_response(context, text)
+        if grounding_response:
+            return grounding_response
+        pet_response = _grounding_pet_response(context, text)
+        if pet_response:
+            return pet_response
         # Friendly patient-facing reminder shorthand. If no AM/PM is supplied,
         # interpret a bare afternoon/evening clock time as PM; the full LLM
         # tool path remains available for more complex recurrence/date requests.

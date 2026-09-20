@@ -2,7 +2,7 @@
   "patient_chat_id": "c742f2a9-0e8e-4ed9-a6cb-bcc39fdc1001",
   "caregiver_chat_id": "576d31b7-7599-42b0-9868-66c7124efad0",
   "patient_name": "Maggie",
-  "caregiver_name": "Susan",
+  "caregiver_name": "Sameha",
   "caregiver_relationship": "daughter",
   "patient_notes": "Use short, simple replies.",
   "caregiver_notes": "Caregiver-provided facts are the source of truth for patient memory.",
@@ -18,7 +18,7 @@
   ],
   "important_people": [
     {
-      "name": "Susan",
+      "name": "Sameha",
       "relationship": "daughter"
     }
   ],
@@ -36,5 +36,32 @@
   ],
   "communication_preferences": [
     "Use short, simple replies."
-  ]
+  ],
+  "grounding_memories": {
+    "pets": [
+      {
+        "name": "Milo",
+        "type": "dog",
+        "details": "Golden retriever who lived with Maggie for 12 years.",
+        "emotional_context": "Maggie was very attached to Milo and enjoyed talking about him."
+      },
+      {
+        "name": "Whiskers",
+        "type": "cat",
+        "details": "Family cat during childhood.",
+        "emotional_context": "A warm topic for gentle reminiscence."
+      }
+    ],
+    "family_and_relationships": [
+      {
+        "person": "Sameha",
+        "relationship": "daughter",
+        "details": "Primary caregiver and source of truth for care updates."
+      }
+    ],
+    "favorite_things": ["Classical piano", "Gardening", "Chinese food", "Old photographs", "Watching baseball"],
+    "life_history": ["Grew up in Toronto.", "Worked as a teacher for many years.", "Enjoyed travelling with family.", "Played piano from a young age."],
+    "comfort_topics": ["Talking about Milo.", "Listening to familiar piano music.", "Talking about gardening.", "Looking through old family photographs."],
+    "conversation_notes": ["Prefers short, simple conversations.", "Do not quiz the patient about dates or names.", "If confused or distressed, gently shift toward a familiar positive topic."]
+  }
 }

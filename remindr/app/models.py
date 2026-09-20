@@ -71,6 +71,29 @@ class IntakeEvent(BaseModel):
     starts_at: datetime
 
 
+class GroundingPet(BaseModel):
+    name: str = Field(min_length=1, max_length=120)
+    type: str = Field(min_length=1, max_length=80)
+    details: str = Field(default="", max_length=500)
+    emotional_context: str = Field(default="", max_length=500)
+
+
+class GroundingRelationship(BaseModel):
+    person: str = Field(min_length=1, max_length=120)
+    relationship: str = Field(min_length=1, max_length=120)
+    details: str = Field(default="", max_length=500)
+
+
+class GroundingMemories(BaseModel):
+    """Curated positive life context for supportive reminiscence, not clinical advice."""
+    pets: list[GroundingPet] = Field(default_factory=list, max_length=30)
+    family_and_relationships: list[GroundingRelationship] = Field(default_factory=list, max_length=50)
+    favorite_things: list[str] = Field(default_factory=list, max_length=50)
+    life_history: list[str] = Field(default_factory=list, max_length=50)
+    comfort_topics: list[str] = Field(default_factory=list, max_length=50)
+    conversation_notes: list[str] = Field(default_factory=list, max_length=50)
+
+
 class SignupIntakeInput(SignupContextInput):
     doctors: list[IntakeDoctor] = Field(default_factory=list, max_length=20)
     important_people: list[IntakePerson] = Field(default_factory=list, max_length=50)
@@ -78,3 +101,4 @@ class SignupIntakeInput(SignupContextInput):
     upcoming_events: list[IntakeEvent] = Field(default_factory=list, max_length=50)
     safety_notes: list[str] = Field(default_factory=list, max_length=50)
     communication_preferences: list[str] = Field(default_factory=list, max_length=50)
+    grounding_memories: GroundingMemories = Field(default_factory=GroundingMemories)

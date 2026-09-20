@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="title desc">
+  <title id="title">Remindr technical architecture</title>
+  <desc id="desc">A 16 by 9 technical architecture diagram showing the patient and caregiver interfaces, Linq messaging, secure FastAPI intelligence layer, OpenAI, MongoDB, and reminder scheduling.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 Z" fill="#1F8A8A"/></marker>
+    <style>
+      .heading { font-family: Arial, Helvetica, sans-serif; font-size: 50px; font-weight: 700; fill: #0F2A43; }
+      .subheading { font-family: Arial, Helvetica, sans-serif; font-size: 22px; fill: #5B6B7B; }
+      .group-title { font-family: Arial, Helvetica, sans-serif; font-size: 20px; font-weight: 700; fill: #0F2A43; letter-spacing: 1.5px; }
+      .node-title { font-family: Arial, Helvetica, sans-serif; font-size: 25px; font-weight: 700; fill: #0F2A43; }
+      .node-copy { font-family: Arial, Helvetica, sans-serif; font-size: 18px; fill: #5B6B7B; }
+      .label { font-family: Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 700; fill: #1F8A8A; }
+      .group { fill: #FFFFFF; stroke: #DDE5EA; stroke-width: 2; }
+      .node { fill: #FFFFFF; stroke: #0F2A43; stroke-width: 2.5; }
+      .node-accent { fill: #E8F5F5; stroke: #1F8A8A; stroke-width: 3; }
+      .line { fill: none; stroke: #1F8A8A; stroke-width: 4; marker-end: url(#arrow); }
+      .line-muted { fill: none; stroke: #5B6B7B; stroke-width: 3; marker-end: url(#arrow); }
+      .line-dash { fill: none; stroke: #1F8A8A; stroke-width: 3; stroke-dasharray: 11 9; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <rect width="1920" height="1080" fill="#FFFFFF"/>
+  <rect x="100" y="77" width="14" height="99" rx="7" fill="#1F8A8A"/>
+  <text x="145" y="120" class="heading">Remindr: Safety-First Care Coordination</text>
+  <text x="145" y="158" class="subheading">iMessage-native support, controlled AI actions, and persistent care memory</text>
+  <line x1="100" y1="210" x2="1820" y2="210" stroke="#DDE5EA" stroke-width="2"/>
+
+  <!-- Group containers -->
+  <rect x="100" y="260" width="360" height="650" rx="20" class="group"/>
+  <rect x="510" y="260" width="330" height="650" rx="20" class="group"/>
+  <rect x="890" y="260" width="550" height="650" rx="20" class="group"/>
+  <rect x="1490" y="260" width="330" height="650" rx="20" class="group"/>
+
+  <text x="130" y="305" class="group-title">CARE EXPERIENCE</text>
+  <text x="540" y="305" class="group-title">MESSAGE DELIVERY</text>
+  <text x="920" y="305" class="group-title">REMINDr INTELLIGENCE</text>
+  <text x="1520" y="305" class="group-title">PERSISTENT MEMORY</text>
+
+  <!-- Experience -->
+  <rect x="135" y="360" width="290" height="155" rx="15" class="node"/>
+  <circle cx="184" cy="420" r="23" fill="#1F8A8A"/>
+  <path d="M174 421h20M184 411v20" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+  <text x="225" y="414" class="node-title">Patient</text>
+  <text x="225" y="445" class="node-copy">iMessage companion</text>
+  <text x="225" y="472" class="node-copy">simple, familiar chat</text>
+
+  <rect x="135" y="640" width="290" height="155" rx="15" class="node"/>
+  <circle cx="184" cy="700" r="23" fill="#0F2A43"/>
+  <path d="M169 705c5-13 25-13 30 0M184 675a10 10 0 1 0 0 20a10 10 0 0 0 0-20" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+  <text x="225" y="694" class="node-title">Caregiver</text>
+  <text x="225" y="725" class="node-copy">portal + iMessage</text>
+  <text x="225" y="752" class="node-copy">authoritative updates</text>
+
+  <!-- Delivery -->
+  <rect x="545" y="400" width="260" height="155" rx="15" class="node-accent"/>
+  <text x="585" y="456" class="node-title">Linq API</text>
+  <text x="585" y="488" class="node-copy">iMessage delivery</text>
+  <text x="585" y="515" class="node-copy">signed webhooks</text>
+
+  <rect x="545" y="650" width="260" height="125" rx="15" class="node"/>
+  <text x="585" y="704" class="node-title">ngrok</text>
+  <text x="585" y="736" class="node-copy">HTTPS webhook tunnel</text>
+
+  <!-- Intelligence -->
+  <rect x="925" y="360" width="480" height="160" rx="15" class="node-accent"/>
+  <text x="965" y="416" class="node-title">FastAPI service</text>
+  <text x="965" y="448" class="node-copy">Python · Uvicorn · webhook API</text>
+  <text x="965" y="475" class="node-copy">caregiver endpoints · response orchestration</text>
+
+  <rect x="925" y="585" width="215" height="190" rx="15" class="node"/>
+  <text x="955" y="635" class="node-title">Guardrails</text>
+  <text x="955" y="668" class="node-copy">Pydantic schemas</text>
+  <text x="955" y="695" class="node-copy">signature checks</text>
+  <text x="955" y="722" class="node-copy">role permissions</text>
+  <text x="955" y="749" class="node-copy">idempotency</text>
+
+  <rect x="1190" y="585" width="215" height="190" rx="15" class="node"/>
+  <text x="1220" y="635" class="node-title">OpenAI</text>
+  <text x="1220" y="668" class="node-copy">GPT-5.6 Luna</text>
+  <text x="1220" y="695" class="node-copy">constrained tool</text>
+  <text x="1220" y="722" class="node-copy">selection only</text>
+
+  <rect x="925" y="825" width="480" height="55" rx="13" fill="#E8F5F5"/>
+  <text x="1165" y="860" text-anchor="middle" class="node-copy" style="font-weight:700;fill:#0F2A43">APScheduler · dependable reminder delivery</text>
+
+  <!-- Data -->
+  <rect x="1525" y="400" width="260" height="235" rx="15" class="node-accent"/>
+  <ellipse cx="1655" cy="448" rx="80" ry="20" fill="#1F8A8A"/>
+  <path d="M1575 448v115c0 27 160 27 160 0V448M1575 500c0 27 160 27 160 0M1575 555c0 27 160 27 160 0" fill="#E8F5F5" stroke="#1F8A8A" stroke-width="3"/>
+  <text x="1655" y="606" text-anchor="middle" class="node-title">MongoDB</text>
+  <text x="1655" y="672" text-anchor="middle" class="node-copy">context · people · events</text>
+  <text x="1655" y="699" text-anchor="middle" class="node-copy">reminders · history</text>
+
+  <rect x="1525" y="715" width="260" height="95" rx="15" class="node"/>
+  <text x="1655" y="756" text-anchor="middle" class="node-title">Docker</text>
+  <text x="1655" y="786" text-anchor="middle" class="node-copy">portable local runtime</text>
+
+  <!-- Connections -->
+  <path d="M425 437 H545" class="line"/>
+  <path d="M425 717 H500 Q520 717 520 697 V477 Q520 457 545 477" class="line-muted"/>
+  <text x="462" y="410" class="label">messages</text>
+
+  <path d="M675 555 V650" class="line"/>
+  <text x="700" y="615" class="label">webhooks</text>
+  <path d="M805 712 H855 Q875 712 875 692 V440 Q875 420 925 440" class="line"/>
+
+  <path d="M1140 680 H1190" class="line-dash"/>
+  <text x="1165" y="660" text-anchor="middle" class="label">tools</text>
+  <path d="M1405 440 H1490" class="line"/>
+  <path d="M1140 725 H1460 Q1480 725 1480 705 V590 Q1480 570 1525 570" class="line-muted"/>
+  <text x="1310" y="705" class="label">validated reads / writes</text>
+  <path d="M1405 852 H1460 Q1480 852 1480 832 V760 Q1480 740 1525 740" class="line"/>
+  <text x="1310" y="835" class="label">due reminders</text>
+
+  <!-- Footer -->
+  <line x1="100" y1="965" x2="1820" y2="965" stroke="#DDE5EA" stroke-width="2"/>
+  <circle cx="116" cy="1014" r="9" fill="#1F8A8A"/>
+  <text x="140" y="1021" class="subheading">The AI proposes actions; Remindr validates every action and retains control of patient memory and delivery.</text>
+</svg>
