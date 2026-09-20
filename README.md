@@ -1,4 +1,3 @@
-# hackmit_2026
 # Remindr 
  
 A backend-first **iMessage care companion** for people who need help with memory, routines, and daily reminders and for the caregivers who look after them.
@@ -99,8 +98,8 @@ Messages travel over [Linq](https://linqapp.com) (iMessage), memory lives in Mon
 | 1 | `DONE` | Code | Marks the most recently *sent* reminder for the chat as acknowledged. |
 | 2 | Reminder shorthand | Code (regex) | e.g. `remind me to take a walk at 5pm`. |
 | 3 | Relationship lookup | Code (regex + DB) | e.g. `Who is my daughter?`, `What is her doctor's name?`, `Who is Maggie's doctor?` |
-| 4 | Person lookup | Code (regex + DB) | e.g. `Who is Susan?`, `Tell me about Susan`, `Do you remember Susan?` |
-| 5 | Personal-fact statement | Code (regex + DB) | e.g. `Susan is my daughter.` Only if the sender is allowed to write. |
+| 4 | Person lookup | Code (regex + DB) | e.g. `Who is Sameha?`, `Tell me about Sameha`, `Do you remember Sameha?` |
+| 5 | Personal-fact statement | Code (regex + DB) | e.g. `Sameha is my daughter.` Only if the sender is allowed to write. |
 | 6 | Everything else | OpenAI + tools | Strict function calling, then a final reply generated from tool results. |
  
 ### Reminder shorthand
@@ -160,7 +159,7 @@ Create two Linq chats: one with the patient, one with the caregiver and link the
 | Behavior | Patient chat | Caregiver chat |
 |---|---|---|
 | Add/update people and events | Not allowed (asked to contact caregiver) | Allowed |
-| Ask "Who is Susan?" | Answered as "…is **your** daughter" | Answered as "…is **the patient's** daughter" |
+| Ask "Who is Sameha?" | Answered as "…is **your** daughter" | Answered as "…is **the patient's** daughter" |
 | Create reminders | Allowed, delivered to the patient chat | Allowed, delivered to the patient chat |
 | Third-person facts (`her doctor is Sarah`) | n/a | Saved to the patient's memory |
 | Confusion evaluation | Yes | No |
@@ -193,7 +192,7 @@ pending ──claimed──▶ sending ──delivered──▶ sent ──patie
  
 - **Polling.** An `AsyncIOScheduler` runs `deliver_due` every `SCHEDULER_POLL_SECONDS` (default 30) with `max_instances=1` and `coalesce=True`.
 - **Atomic lease.** `claim_due_reminders` uses `find_one_and_update` to flip `pending → sending`, so two app instances cannot claim the same reminder.
-- **Delivery message.** `⏰ It's time for {task}. Reply DONE when you've done it.`
+- **Delivery message.** `It's time for {task}. Reply DONE when you've done it.`
 - **Recurrence.** After a successful send, `daily` and `weekly` reminders enqueue their next occurrence (`due_at` + 1 or 7 days).
 - **Failures.** If sending raises, the claim is released and the reminder returns to `pending`; the error is re-raised for the scheduler's logs.
 - **Acknowledgement.** Replying `DONE` marks the latest `sent` reminder as `acknowledged` with a timestamp.
@@ -207,7 +206,7 @@ For every **patient** message, `MessageEvaluator` produces an `AgentEvaluation`:
  
 ```json
 {
-  "reply_text": "You're not alone. Please stay where you are, and I'll let Susan know.",
+  "reply_text": "You're not alone. Please stay where you are, and I'll let Sameha know.",
   "confusion_score": 0.85,
   "confusion_flag": true,
   "routine_intent": "DISTRESS_CALL",
@@ -278,10 +277,10 @@ Try the webhook locally using the lightweight test contract (no signature secret
  
 ```bash
 curl -X POST http://localhost:8000/webhooks/linq -H 'content-type: application/json' \
-  -d '{"message_id":"m1","sender_id":"demo-chat","text":"Susan is my daughter."}'
+  -d '{"message_id":"m1","sender_id":"demo-chat","text":"Sameha is my daughter."}'
  
 curl -X POST http://localhost:8000/webhooks/linq -H 'content-type: application/json' \
-  -d '{"message_id":"m2","sender_id":"demo-chat","text":"Who is Susan?"}'
+  -d '{"message_id":"m2","sender_id":"demo-chat","text":"Who is Sameha?"}'
 ```
  
 Local MongoDB defaults: image `mongo:8`, port `27017`, persistent volume `mongodb_data`.
@@ -342,12 +341,12 @@ Links the two chats, creates both context documents, and seeds people, doctors, 
   "patient_chat_id": "c742f2a9-0e8e-4ed9-a6cb-bcc39fdc1001",
   "caregiver_chat_id": "576d31b7-7599-42b0-9868-66c7124efad0",
   "patient_name": "Maggie",
-  "caregiver_name": "Susan",
+  "caregiver_name": "Sameha",
   "caregiver_relationship": "daughter",
   "patient_notes": "Use short, simple replies.",
   "caregiver_notes": "Caregiver-provided facts are the source of truth for patient memory.",
   "doctors": [{"name": "Sarah", "role": "doctor"}, {"name": "Dr. Chen", "role": "cardiologist"}],
-  "important_people": [{"name": "Susan", "relationship": "daughter"}],
+  "important_people": [{"name": "Sameha", "relationship": "daughter"}],
   "daily_routines": [{"task": "morning medication", "time": "08:00", "recurrence": "daily"}],
   "upcoming_events": [],
   "safety_notes": ["Do not provide medical advice.", "Ask caregiver for medication changes."],
@@ -407,7 +406,7 @@ Examples:
  
 ```bash
 curl -X POST http://localhost:8000/caregiver/people -H 'content-type: application/json' \
-  -d '{"recipient_id":"imessage-user-1","name":"Susan","relationship":"daughter"}'
+  -d '{"recipient_id":"imessage-user-1","name":"Sameha","relationship":"daughter"}'
  
 curl -X POST http://localhost:8000/caregiver/reminders -H 'content-type: application/json' \
   -d '{"recipient_id":"imessage-user-1","task":"Evening medication","due_at":"2026-09-19T20:00:00-04:00","recurrence":"daily"}'
@@ -423,9 +422,9 @@ curl http://localhost:8000/caregiver/memory-check/imessage-user-1
  
 | Chat | Message | Reply |
 |---|---|---|
-| Caregiver | `Susan is my daughter.` | `I'll remember that Susan is the patient's daughter.` |
-| Patient | `Who is Susan?` | `Susan is your daughter.` |
-| Patient | `Susan is my sister.` | `I can't change personal facts from this chat. Please ask your caregiver to update that information.` |
+| Caregiver | `Sameha is my daughter.` | `I'll remember that Sameha is the patient's daughter.` |
+| Patient | `Who is Sameha?` | `Sameha is your daughter.` |
+| Patient | `Sameha is my sister.` | `I can't change personal facts from this chat. Please ask your caregiver to update that information.` |
 | Caregiver | `Maggie's doctor is Dr. Chen.` | Saved as Dr. Chen → doctor |
 | Patient | `Who is my doctor?` | `Your doctor is Dr. Chen.` |
 | Patient | `Who is Bob?` | `I don't have saved information about Bob.` |
@@ -434,8 +433,8 @@ curl http://localhost:8000/caregiver/memory-check/imessage-user-1
  
 | Chat | Message | Reply |
 |---|---|---|
-| Patient | `remind me to call Susan at 5pm` | `Okay — I'll remind you about call Susan at 5:00 PM.` |
-| Companion | *(at 5:00 PM)* | `⏰ It's time for call Susan. Reply DONE when you've done it.` |
+| Patient | `remind me to call Sameha at 5pm` | `Okay — I'll remind you about call Sameha at 5:00 PM.` |
+| Companion | *(at 5:00 PM)* | `⏰ It's time for call Sameha. Reply DONE when you've done it.` |
 | Patient | `DONE` | `Thank you — I marked it done.` |
 | Patient | `DONE` *(nothing pending)* | `I don't see a reminder waiting for confirmation.` |
  
