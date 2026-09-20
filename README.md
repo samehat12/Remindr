@@ -1,5 +1,5 @@
 # hackmit_2026
-# Remindr — Care Companion MVP
+# Remindr 
  
 A backend-first **iMessage care companion** for people who need help with memory, routines, and daily reminders and for the caregivers who look after them.
  
@@ -9,30 +9,6 @@ Messages travel over [Linq](https://linqapp.com) (iMessage), memory lives in Mon
  
 > **Disclaimer:** this is a hackathon prototype. It is not a medical device, gives no medical advice, and is not intended for clinical decisions.
  
----
- 
-## Table of contents
- 
-1. [Highlights](#highlights)
-2. [Architecture](#architecture)
-3. [Project structure](#project-structure)
-4. [How a message is handled](#how-a-message-is-handled)
-5. [The assistant](#the-assistant)
-6. [Two-channel caregiver mode](#two-channel-caregiver-mode)
-7. [Reminders and the scheduler](#reminders-and-the-scheduler)
-8. [Confusion detection and caregiver alerts](#confusion-detection-and-caregiver-alerts)
-9. [Data model](#data-model)
-10. [Quick start](#quick-start)
-11. [Configuration](#configuration)
-12. [Connecting Linq](#connecting-linq)
-13. [Onboarding a patient](#onboarding-a-patient)
-14. [API reference](#api-reference)
-15. [Example conversations](#example-conversations)
-16. [Testing](#testing)
-17. [Security and privacy](#security-and-privacy)
-18. [Known limitations](#known-limitations)
-19. [Production checklist](#production-checklist)
-20. [Tech stack](#tech-stack)
 ---
  
 ## Highlights
@@ -85,31 +61,7 @@ Messages travel over [Linq](https://linqapp.com) (iMessage), memory lives in Mon
 3. All database I/O lives in one class (`Repository`), which makes scoping and validation easy to audit.
 4. Anything that must always work (persisting a stated fact, acknowledging `DONE`) doesn't depend on the model behaving.
 ---
- 
-## Project structure
- 
-```
-remindr/
-├── app/
-│   ├── __init__.py
-│   ├── main.py          # FastAPI app: webhook, caregiver endpoints, signup endpoints, lifespan/scheduler
-│   ├── assistant.py     # CareAssistant: deterministic parsers, OpenAI tool loop, tool execution
-│   ├── evaluator.py     # MessageEvaluator + AgentEvaluation: confusion scoring and alert text
-│   ├── repository.py    # Repository: all MongoDB reads/writes, chat resolution, leases
-│   ├── scheduler.py     # ReminderScheduler: claims and delivers due reminders
-│   ├── linq.py          # LinqClient: Linq Partner API v3 sender with retries
-│   ├── models.py        # Pydantic request/response models with length limits
-│   └── config.py        # Settings loaded from environment / .env
-├── examples/
-│   └── intake.example.json   # Sample payload for POST /signup/intake
-├── tests/
-│   └── test_mvp.py           # 34 pytest tests (mongomock)
-├── docker-compose.yml        # MongoDB 8 for local development
-├── requirements.txt          # Pinned dependencies
-├── .env.example              # Configuration template
-└── .gitignore
-```
- 
+
 ### Module responsibilities
  
 | Module | Responsibility |
@@ -203,7 +155,7 @@ Deterministic paths still work. Anything that would need the model replies: *"Me
  
 ## Two-channel caregiver mode
  
-Create two Linq chats — one with the patient, one with the caregiver — and link them. Both then share **one patient memory**, keyed by the patient chat ID.
+Create two Linq chats: one with the patient, one with the caregiver and link them. Both then share **one patient memory**, keyed by the patient chat ID.
  
 | Behavior | Patient chat | Caregiver chat |
 |---|---|---|
